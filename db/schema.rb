@@ -10,21 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_130700) do
+ActiveRecord::Schema.define(version: 2022_03_01_140030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.text "answers"
+    t.text "content"
     t.bigint "asker_id"
     t.bigint "replier_id"
-    t.integer "replier"
     t.boolean "rejected"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["asker_id"], name: "index_answers_on_asker_id"
     t.index ["replier_id"], name: "index_answers_on_replier_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.bigint "user_a_id"
+    t.bigint "user_b_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_a_id"], name: "index_chatrooms_on_user_a_id"
+    t.index ["user_b_id"], name: "index_chatrooms_on_user_b_id"
+  end
+
+  create_table "icebreakers", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "chatroom_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "user_interests", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "interest_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["interest_id"], name: "index_user_interests_on_interest_id"
+    t.index ["user_id"], name: "index_user_interests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,4 +85,10 @@ ActiveRecord::Schema.define(version: 2022_03_01_130700) do
 
   add_foreign_key "answers", "users", column: "asker_id"
   add_foreign_key "answers", "users", column: "replier_id"
+  add_foreign_key "chatrooms", "users", column: "user_a_id"
+  add_foreign_key "chatrooms", "users", column: "user_b_id"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
+  add_foreign_key "user_interests", "interests"
+  add_foreign_key "user_interests", "users"
 end
