@@ -13,9 +13,8 @@ class User < ApplicationRecord
   has_many :answers_as_replier, class_name: "Answer", foreign_key: :replier_id
 
   validates :password, :email, :age, :preferred_date_ideas, presence: true
-  validates :name, presence: false
   validates :about_me, presence: true, length: { in: 30..100 }
   validates :nickname, presence: true, uniqueness: true
-  validates :orientation, presence: true, inclusion: { in: %w(heterosexual homosexual bisexual) }
-  validates :gender, presence: true, inclusion: { in: %w(male female binary) }
+  validates :orientation, presence: true, inclusion: { in: %w(heterosexual gay bisexual) }
+  validates :gender, presence: true, inclusion: { in: ["male", "female", "non-binary", "prefer not to say"] }
 end
