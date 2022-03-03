@@ -1,31 +1,37 @@
-<h2>Sign up</h2>
+<div class="container">
+  <%= image_tag "couple.png", :class => "large-logo" %> 
+</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email,
+    <%= f.input :nickname,
                 required: true,
                 autofocus: true,
+                label: 'Nickname', 
+                wrapper: :input_group,
+                input_html: { autocomplete: "nickname" }%>
+    <%= f.input :email,
+                required: true,
+                wrapper: :input_group,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                wrapper: :input_group,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :about_me,
-                required: true,
-                input_html: { autocomplete: "about me" } %>
     <%= f.input :age,
                 required: true,
+                wrapper: :input_group,
                 input_html: { autocomplete: "age" } %>
     <%= f.input :preferred_date_ideas,
                 required: true,
+                wrapper: :input_group,
                 input_html: { autocomplete: "preferred_date_ideas" } %>
     <%= f.input :gender, collection: ["male", "female", "non-binary", "prefer not to say"],
                 as: :check_boxes,
+                wrapper: :input_group,
                 input_html: { multiple: true },
                 include_blank: false,
                 include_hidden: false,
@@ -33,6 +39,7 @@
 
     <%= f.input :orientation, collection: %w(heterosexual gay bisexual),
                 as: :check_boxes,
+                wrapper: :input_group,
                 input_html: { multiple: true },
                 include_blank: false,
                 include_hidden: false,
