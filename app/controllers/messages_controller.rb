@@ -7,6 +7,11 @@ class MessagesController < ApplicationController
     @message.chatroom = @chatroom
     # Message needs a user
     @message.user = current_user
+    if @message.save
+      redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id}")
+    else
+      render "chatrooms/show"
+    end
   end
 
   private
