@@ -1,0 +1,11 @@
+<div class="container chatroom">
+  <% @chatroom.messages.each do |message| do %>
+      <%= message.id %>
+        <strong><%= message.user.nickname %></strong>
+        <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+        <p><%= message.content %></p>
+  <% end %>
+  <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
+        <%= f.input :content, label: false%>
+        <%= f.submit "Send" %>
+</div>
