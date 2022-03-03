@@ -13,6 +13,7 @@ Interest.destroy_all
 
 
 puts "Deleted all instances of database"
+
 file_botanest = URI.open('https://s3.amazonaws.com/lowres.cartoonstock.com/music-botanical_violinist-botanists-green_fingers-gardener-flower-rbon2978_low.jpg')
 botanest = User.new(nickname: "mermaid91", password: "123456", email: "oliv@gmail.com", gender: "female", preferred_date_ideas: "wine and dine", orientation: "heterosexual",  about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 26)
 botanest.photo.attach(io: file_botanest, filename: 'botanest.jpg', content_type: 'image/jpg')
@@ -52,6 +53,7 @@ kissy = User.new(nickname: "nuhyej",  password: "123456", email: 'jeyhun@gmail.c
 kissy.photo.attach(io: file_kissy, filename: 'kissy.jpg', content_type: 'image/png')
 
 puts "Users newd"
+
 interests = ["Film", "Sports", "Books & Literature", "Politics & Current Events", "Food & Drink", "Arts & Museums", "Yoga & Meditation", "Coding"]
 interests.each do |interest|
   Interest.create!(content: interest)
