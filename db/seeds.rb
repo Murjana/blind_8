@@ -1,4 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+require "open-uri"
+ # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -12,6 +13,7 @@ Interest.destroy_all
 
 
 puts "Deleted all instances of database"
+
 User.create!(nickname: "mermaid91", password: "123456", email: "oliv@gmail.com", gender: "female", preferred_date_ideas: "wine and dine", orientation: "heterosexual",  about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 25 )
 User.create!(nickname: "missmoin", password: "654321", email: "narmina@gmail.com", gender: "male" , preferred_date_ideas: "dinner and a movie :)", orientation: "bisexual",  about_me: "I'm looking for friends but also hoping to meet mr. right. I've been described as a good listener and fun person to be around", age: 25)
 User.create!(nickname: "chriscross", password: "123465", email: "chris@gmail.com", gender: "non-binary" , preferred_date_ideas: "bouldering or something physically active", orientation: "bisexual",  about_me: "I'm Chris. I'm open to absolutely anything. I love new experiences and the opportunity to meet new people. I'd love to go on a blind date. I've never been on one before. Low expectations.", age: 25)
@@ -20,6 +22,7 @@ User.create!(nickname: "alosif", password: "123456", email: 'fisola@gmail.com', 
 User.create!(nickname: "yelsew", password: "123456", email: 'wes@gmail.com', gender: "male", preferred_date_ideas: "pizza and netlfix", orientation: "gay",  about_me: "Prior to this, I worked in book publishing and media for 7 years between New York and London. After Le Wagon, I hope to become a fulltime freelancer or work for an exciting tech company.", age: 25)
 User.create!(nickname: "clairebear", password: "123456", email: 'claire@gmail.com', gender: "female", preferred_date_ideas: "We show each other our DB schemas ;)", orientation: "heterosexual",  about_me: "I'm a teacher at Le Wagon and I love coding and helping peopel perfect their projects!", age: 25)
 User.create!(nickname: "nuhyej",  password: "123456", email: 'jeyhun@gmail.com', gender: "male" , preferred_date_ideas: "A classy dinner and some top-notch wine", orientation: "heterosexual",  about_me: "All the code in the world won't solve your business problems. You need to know how to use it =)", age: 25)
+
 
 puts "Users created"
 interests = ["Film", "Sports", "Books & Literature", "Politics & Current Events", "Food & Drink", "Arts & Museums", "Yoga & Meditation", "Coding"]
