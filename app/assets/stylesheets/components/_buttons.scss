@@ -1,0 +1,28 @@
+#pink {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: $logo-pink;
+    transition: background 0.3s ease;
+  }
+
+#black {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: black;
+    transition: background 0.3s ease;
+    border-color: white;
+  }
+  
+  .btn-flat:hover {
+    background: #1BCB7F;
+    color: white;
+  }
+
+  .btn.btn-sign-up {
+    width: 70%;
+    margin-bottom: 16px;
+    border-radius: 20px;
+}
+

@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+    <body>
+        <div class="home">
+            <div class="container">
+              <img src="../assets/images/couple.png" alt="">
+            </div>
+            <div class="container">
+              <h1>Blind8</h1>
+              <p>Dating goes blind</p>
+            <div class="form-group">
+              <label>User Name</label>
+              <input type="text" class="form-control" placeholder="User Name">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div>
+              <%= link_to "Login", "#", class: "btn btn-flat" %>
+              <%= link_to "Sign Up", "#", class: "btn btn-flat" %>
+            </div>
+          </div> 
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,17 @@
+.form-control {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid $logo-pink;
+}
+
+.form-check-label {
+    color: white;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
