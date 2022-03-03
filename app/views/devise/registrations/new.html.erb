@@ -15,6 +15,28 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :about_me,
+                required: true,
+                input_html: { autocomplete: "about me" } %>
+    <%= f.input :age,
+                required: true,
+                input_html: { autocomplete: "age" } %>
+    <%= f.input :preferred_date_ideas,
+                required: true,
+                input_html: { autocomplete: "preferred_date_ideas" } %>
+    <%= f.input :gender, collection: ["male", "female", "non-binary", "prefer not to say"],
+                as: :check_boxes,
+                input_html: { multiple: true },
+                include_blank: false,
+                include_hidden: false,
+                label: 'gender' %>
+
+    <%= f.input :orientation, collection: %w(heterosexual gay bisexual),
+                as: :check_boxes,
+                input_html: { multiple: true },
+                include_blank: false,
+                include_hidden: false,
+                label: 'orientation' %>
   </div>
 
   <div class="form-actions">
