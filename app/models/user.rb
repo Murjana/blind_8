@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :answers_as_asker, class_name: "Answer", foreign_key: :asker_id
   has_many :answers_as_replier, class_name: "Answer", foreign_key: :replier_id
+  has_one_attached :photo
 
   validates :password, :email, :age, :preferred_date_ideas, presence: true
   validates :about_me, presence: true, length: { in: 30..100 }
