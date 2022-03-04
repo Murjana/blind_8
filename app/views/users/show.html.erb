@@ -1,9 +1,14 @@
-       <div class="container">
+       <div class="container" data-controller="notification">
+        <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">
+         "Your question has been sent to the user"
+          <button type="button" class="btn-close" data-action="click->notification#close">
+            </button>
+      </div>
         <div class="user-card-title">
           <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %><h2><%= @user.nickname %></h2>
             <p><%= @user.nickname %></p>
             <p><%= @user.age %></p>
             <p><%= @user.about_me %><p>
           <%= link_to "Back", users_path %>
-        <a class="btn btn-flat" href="user_path">Poke</a>
+        <a class="btn btn-flat" href="#" data-action="click->notification#poke">Poke</a>
       <div>
