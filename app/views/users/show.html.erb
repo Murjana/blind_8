@@ -1,6 +1,9 @@
+       <div class="container">
         <div class="user-card-title">
           <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %><h2><%= @user.nickname %></h2>
-            <p><%= @user.orientation %></p>
+            <p><%= @user.nickname %></p>
             <p><%= @user.age %></p>
-          <%= link_to "Back", :back %>
-        <a class="btn btn-flat" href="#">Poke</a>
+            <p><%= @user.about_me %><p>
+          <%= link_to "Back", users_path %>
+        <a class="btn btn-flat" href="user_path">Poke</a>
+      <div>
