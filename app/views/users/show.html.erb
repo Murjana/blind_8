@@ -1,7 +1,6 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2> <%= @user.name %>, <%= @user.age %> </h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+        <div class="user-card-title">
+          <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %><h2><%= @user.nickname %></h2>
+            <p><%= @user.orientation %></p>
+            <p><%= @user.age %></p>
+          <%= link_to "Back", :back %>
+        <a class="btn btn-flat" href="#">Poke</a>
