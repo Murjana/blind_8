@@ -10,11 +10,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :orientation, :gender, :preferred_date_ideas, :about_me, :age])
   end
   helper_method :resource_name, :resource, :devise_mapping, :resource_class
-
+  #methods for sign up as a homepage
   def resource_name
     :user
   end
- 
+
   def resource
     @resource ||= User.new
   end
@@ -22,8 +22,16 @@ class ApplicationController < ActionController::Base
   def resource_class
     User
   end
- 
+
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
+  end
+
+  def after_sign_in_path_for(resource)
+    users_path # your path
+  end
+
+  def after_sign_up_path_for(resource)
+    users_path # your path
   end
 end
