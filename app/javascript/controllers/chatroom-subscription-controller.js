@@ -10,6 +10,8 @@ export default class extends Controller {
       { received: (message) => {
         // This inject the chat of one user to the chat of another without refreshing
         this.element.insertAdjacentHTML("beforeend", message)
+        // As soon as you inject the chat, the chat will appear without the need to scroll down
+        this.element.scrollTop = this.element.scrollHeight
       } }
     )
   }
