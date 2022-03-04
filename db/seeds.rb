@@ -34,7 +34,7 @@ tarzan.photo.attach(io: file_tarzan, filename: 'tarzan.jpg', content_type: 'imag
 tarzan.save!
 
 file_forestman = URI.open('https://thumbs.dreamstime.com/b/british-library-digitised-image-page-61-forest-pictures-adirondacks-original-poems-alfred-b-street-223383918.jpg')
-forestman = User.new(nickname: "alosif", password: "123456", email: 'fisola@gmail.com', gender: "male", preferred_date_ideas: "A wild night out on the town!", orientation: "straight",  about_me: "I recently completed a master's degree in Sustainable Forest and Nature Management at the University of Gottingen, Germany. Before my master's degree ended, I decided to pursue my long-term interest in coding.", age: 31)
+forestman = User.new(nickname: "alosif", password: "123456", email: 'fisola@gmail.com', gender: "male", preferred_date_ideas: "A wild night out on the town!", orientation: "straight",  about_me: "I recently completed a master's degree in Sustainable Forest and Nature Management at the University of Gottingen, Germany.", age: 31)
 forestman.photo.attach(io: file_forestman, filename: 'forestman.jpg', content_type: 'image/jpg')
 forestman.save!
 
