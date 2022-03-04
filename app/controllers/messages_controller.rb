@@ -8,7 +8,11 @@ class MessagesController < ApplicationController
     # Message needs a user
     @message.user = current_user
     if @message.save
-      redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id}")
+      # This braodcast the message to the suscribed chatroom once a message is sent to suscriber
+      ChatroomChannel.broadcast_to(@chatroom,
+        render_to_string(partial: "message", locals: { message:
+        @message })
+      )
     else
       render "chatrooms/show"
     end
