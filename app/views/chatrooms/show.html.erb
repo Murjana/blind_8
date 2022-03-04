@@ -6,7 +6,8 @@
 
   <div class="messages"
 
-   data-chatroom-subscription-target="messages">
+   data-chatroom-subscription-target="messages"
+   data-chatroom-subscription-target="form">
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
