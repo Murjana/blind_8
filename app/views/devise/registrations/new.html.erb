@@ -29,22 +29,14 @@
                 required: true,
                 wrapper: :input_group,
                 input_html: { autocomplete: "preferred_date_ideas" } %>
-    <%= f.input :gender, collection: ["male", "female", "non-binary", "prefer not to say"],
-                as: :check_boxes,
+    <%= f.input :gender, collection: [["male", "male"], ["female","female"], ["non-binary","non-binary"], ["prefer not to say", "prefer not to say"]],
+                as: :select,
                 wrapper: :input_group,
-                input_html: { multiple: true },
-                include_blank: false,
-                include_hidden: false,
                 label: 'gender' %>
 
     <%= f.input :orientation, collection: %w(heterosexual gay bisexual),
-                as: :check_boxes,
                 wrapper: :input_group,
-                input_html: { multiple: true },
-                include_blank: false,
-                include_hidden: false,
                 label: 'orientation' %>
-
     <%= f.input :photo, as: :file %>
   </div>
   <div class="form-actions">
