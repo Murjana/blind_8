@@ -5,7 +5,7 @@ export default class extends Controller {
   // This target a specific room Id
   static values = { chatroomId: Number }
   connect() {
-    consumer.subscriptions.create(
+    this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.ChatroomIdValue },
       { received: (message) => {
         // This inject the chat of one user to the chat of another without refreshing
@@ -14,5 +14,10 @@ export default class extends Controller {
         this.element.scrollTop = this.element.scrollHeight
       } }
     )
+  }
+  // As soon as the element that connect to this controller disppears from the
+  // DOM, this method get triggered and cancel our susbsription from the chatroom
+  disconnect() {
+    this.channel.unsubscribe()
   }
 }
