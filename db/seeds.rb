@@ -18,7 +18,7 @@ file_botanest = URI.open('https://s3.amazonaws.com/lowres.cartoonstock.com/music
 botanest = User.new(nickname: "mermaid91", password: "123456", email: "oliv@gmail.com", gender: "female", preferred_date_ideas: "wine and dine", orientation: "heterosexual",  about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 26)
 botanest.photo.attach(io: file_botanest, filename: 'botanest.jpg', content_type: 'image/jpg')
 botanest.save!
-file_mr_right = URI.opn('https://cdn.pixabay.com/photo/2019/02/22/10/26/swan-4013225_960_720.jpg')
+file_mr_right = URI.open('https://cdn.pixabay.com/photo/2019/02/22/10/26/swan-4013225_960_720.jpg')
 mr_right = User.new(nickname: "missmoin", password: "654321", email: "narmina@gmail.com", gender: "male" , preferred_date_ideas: "dinner and a movie :)", orientation: "bisexual",  about_me: "I'm looking for friends but also hoping to meet mr. right. I've been described as a good listener and fun person to be around", age: 26)
 mr_right.photo.attach(io: file_mr_right, filename: 'mr_right.jpg', content_type: 'image/jpg')
 mr_right.save!
@@ -28,7 +28,7 @@ boulder = User.new(nickname: "chriscross", password: "123465", email: "chris@gma
 boulder.photo.attach(io: file_boulder, filename: 'boulder.jpg', content_type: 'image/jpg')
 boulder.save!
 
-file_tarzan = URI.open ('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CF34FE43CA2F589A46B9E52EC16A92D2F9818885ED6D6CFBF22B8F217CEEC84E/scale?width=1920&aspectRatio=1.78&format=jpeg')
+file_tarzan = URI.open('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CF34FE43CA2F589A46B9E52EC16A92D2F9818885ED6D6CFBF22B8F217CEEC84E/scale?width=1920&aspectRatio=1.78&format=jpeg')
 tarzan = User.new(nickname: "anajrum", password: "123456", email: 'murjana@gmail.com', gender: "female", preferred_date_ideas: "We stay in and I teach you how to use figma!", orientation: "straight",  about_me: "Former Tv journalist who turned into tech companies( operations side) with a passion to get more technical and more into learning how to build great projects! Will you be my Tarzan?", age: 36)
 tarzan.photo.attach(io: file_tarzan, filename: 'tarzan.jpg', content_type: 'image/jpg')
 tarzan.save!
