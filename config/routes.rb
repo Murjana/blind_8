@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
    
 
+  get "users/:id", to: "users#show", as: :users
   resources :users, only: [:index, :show]
 
   resources :chatrooms, only: :show do
