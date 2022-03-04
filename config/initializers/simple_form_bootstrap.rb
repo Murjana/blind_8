@@ -308,7 +308,7 @@ SimpleForm.setup do |config|
 
   # Input Group - custom component
   # see example app and config at https://github.com/heartcombo/simple_form-bootstrap
-  config.wrappers :input_group, class: 'mb-3' do |b|
+  config.wrappers :input_group, class: 'mb-3 form-group' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
