@@ -16,6 +16,6 @@ class User < ApplicationRecord
   validates :password, :email, :age, :preferred_date_ideas, presence: true
   # validates :about_me, presence: true, length: { in: 30..100 }
   validates :nickname, presence: true, uniqueness: true
-  validates :orientation, presence: true, inclusion: { in: %w(heterosexual gay bisexual) }
+  validates :orientation, presence: true, inclusion: { in: %w(straight heterosexual gay bisexual pansexual) }
   validates :gender, presence: true, inclusion: { in: ["male", "female", "non-binary", "prefer not to say"] }
 end
