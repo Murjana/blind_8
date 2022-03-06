@@ -42,10 +42,11 @@
 
 .card-product {
   overflow: hidden;
+  border-radius: 40px;
   position: relative;
   height: 220px;
   background: white;
-  box-shadow: 0 0 15px $logo-pink;
+  box-shadow: 0 0 10px $logo-pink;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
