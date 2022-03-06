@@ -14,6 +14,20 @@
     transition: background 0.3s ease;
     border-color: white;
   }
+
+#poke {
+  color: white;
+  padding: 8px 24px;
+  margin-right: 15px;
+  width: 100px;
+  border-radius: 4px;
+  background: $logo-pink;
+  transition: background 0.3s ease;
+  position: absolute;
+  right:    0;
+  bottom:   0;
+  
+}
   
   .btn-flat:hover {
     background: #1BCB7F;
