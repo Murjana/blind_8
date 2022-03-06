@@ -6,14 +6,13 @@ export default class extends Controller {
   static values = { chatroomId: Number }
   static targets = [ "form", "messages" ]
   connect() {
-    console.log("ey you, lets chat")
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: (message) => {
         // This inject the chat of one user to the chat of another without refreshing
         this.messagesTarget.insertAdjacentHTML("beforeend", message)
         // As soon as you inject the chat, the chat will appear without the need to scroll down
-        // this.element.scrollTop = this.element.scrollHeight
+        this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
       } }
     )
   }
