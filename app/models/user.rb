@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   validates :password, :email, :age, :preferred_date_ideas, presence: true
-      # validates :about_me, presence: true, length: { in: 30..200}
+  #validates :about_me, presence: true, length: { in: 30..200}
 
   validates :nickname, presence: true, uniqueness: true
   validates :orientation, presence: true, inclusion: { in: %w(prefer not to say, straight, gay, lesbian, bisexual, allosexual, androsexual, asexual, autosexual, bicurious, demisexua, fluid, graysexual, gynesexual, monosexual, omnisexual, pansexual, polysexual, queer, questioning, skoliosexual, spectrasexual, not listed) }
