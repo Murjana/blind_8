@@ -7,12 +7,16 @@
     <div class="form-inputs">
       <%= f.input :email,
                   required: false,
+                  wrapper: :input_group,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
                   required: false,
+                  wrapper: :input_group,
                   input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <div id="remember_me">
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
+       </div>
     </div>
 
     <div class="form-actions">
