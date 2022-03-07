@@ -19,4 +19,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: true
   validates :orientation, presence: true, inclusion: { in: %w(prefer not to say, straight, gay, lesbian, bisexual, allosexual, androsexual, asexual, autosexual, bicurious, demisexua, fluid, graysexual, gynesexual, monosexual, omnisexual, pansexual, polysexual, queer, questioning, skoliosexual, spectrasexual, not listed) }
   validates :gender, presence: true, inclusion: { in: ['Cis Man', 'Cis Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Non-conforming', 'Prefer not to respond'] }
+  validates :zodiac, presence: true, inclusion: { in: %w(Arie, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces) }
 end
