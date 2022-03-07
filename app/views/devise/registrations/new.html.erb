@@ -41,13 +41,13 @@
                 input_html: { autocomplete: "preferred_date_ideas" } %>
     <%= f.input :gender, collection: %w(Male Female Trans-Man Trans-Woman Non-binary Non-conforming Not-sharing),
                 as: :select,
-                multiple: true,
+                multiple: true, 
                 wrapper: :input_group,
                 label: 'gender' %>
 
-    <%= f.input :orientation, collection: %w(not-sharing straight gay lesbian bisexual allosexual androsexual asexual autosexual bicurious demisexua fluid graysexual gynesexual monosexual omnisexual pansexual polysexual queer questioning skoliosexual spectrasexual not-listed),
+    <%= f.input :orientation, collection: %w(not-sharing straight gay lesbian bisexual allosexual androsexual asexual autosexual bicurious demisexual fluid graysexual gynesexual monosexual omnisexual pansexual polysexual queer questioning skoliosexual spectrasexual not-listed),
                 wrapper: :input_group,
-                label: 'orientation' %>
+                label: 'orientation' %> 
     <%= f.input :photo, as: :file, wrapper: :input_group %>
   </div>
   <div class="form-actions">
