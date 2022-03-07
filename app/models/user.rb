@@ -17,10 +17,7 @@ class User < ApplicationRecord
       # validates :about_me, presence: true, length: { in: 30..200}
 
   validates :nickname, presence: true, uniqueness: true
-  validates :orientation, presence: true, inclusion: { in: %w(heterosexual gay straight pansexual bisexual) }
-  validates :gender, presence: true, inclusion: { in: ["male", "female", "non-binary", "prefer not to say"] }
+  validates :orientation, presence: true, inclusion: { in: %w(prefer not to say, straight, gay, lesbian, bisexual, allosexual, androsexual, asexual, autosexual, bicurious, demisexua, fluid, graysexual, gynesexual, monosexual, omnisexual, pansexual, polysexual, queer, questioning, skoliosexual, spectrasexual, not listed) }
+  validates :gender, presence: true, inclusion: { in: ["Cis Man", "Cis Woman”, “Trans Man”, “Trans Woman”, 'Non-binary', 'Non-conforming', 'Prefer not to respond'] }
 
-  validates :nickname, presence: true, uniqueness: true
-  validates :orientation, presence: true, inclusion: { in: %w(straight heterosexual gay bisexual pansexual) }
-  validates :gender, presence: true, inclusion: { in: ["male", "female", "non-binary", "prefer not to say"] }
 end
