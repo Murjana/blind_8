@@ -1,5 +1,5 @@
 require "open-uri"
- # This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or newd alongside the database with db:setup).
 #
 # Examples:
@@ -10,12 +10,12 @@ require "open-uri"
 UserInterest.destroy_all
 User.destroy_all
 Interest.destroy_all
-
+Icebreaker.destroy_all
 
 puts "Deleted all instances of database"
 
 file_botanest = URI.open('https://s3.amazonaws.com/lowres.cartoonstock.com/music-botanical_violinist-botanists-green_fingers-gardener-flower-rbon2978_low.jpg')
-botanest = User.new(nickname: "mermaid91", password: "123456", email: "oliv@gmail.com", gender: "female", preferred_date_ideas: "wine and dine", orientation: "heterosexual",  about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 26)
+botanest = User.new(nickname: "mermaid91", password: "123456", email: "oliv@gmail.com", gender: "female", preferred_date_ideas: "wine and dine", orientation: "heterosexual", about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 26)
 botanest.photo.attach(io: file_botanest, filename: 'botanest.jpg', content_type: 'image/jpg')
 botanest.save!
 file_mr_right = URI.open('https://cdn.pixabay.com/photo/2019/02/22/10/26/swan-4013225_960_720.jpg')
@@ -24,7 +24,7 @@ mr_right.photo.attach(io: file_mr_right, filename: 'mr_right.jpg', content_type:
 mr_right.save!
 
 file_boulder = URI.open('https://cdn.pixabay.com/photo/2017/06/19/02/21/devils-marbles-2417952_960_720.jpg')
-boulder = User.new(nickname: "chriscross", password: "123465", email: "chris@gmail.com", gender: "non-binary" , preferred_date_ideas: "bouldering or something physically active", orientation: "pansexual",  about_me: "I'm Chris. I'm open to absolutely anything. I love new experiences and the opportunity to meet new people. I'd love to go on a blind date. I've never been on one before. Low expectations.", age: 30)
+boulder = User.new(nickname: "chriscross", password: "123465", email: "chris@gmail.com", gender: "non-binary", preferred_date_ideas: "bouldering or something physically active", orientation: "pansexual",  about_me: "I'm Chris. I'm open to absolutely anything. I love new experiences and the opportunity to meet new people. I'd love to go on a blind date. I've never been on one before. Low expectations.", age: 30)
 boulder.photo.attach(io: file_boulder, filename: 'boulder.jpg', content_type: 'image/jpg')
 boulder.save!
 
@@ -44,7 +44,7 @@ pizza.photo.attach(io: file_pizza, filename: 'pizza.jpg', content_type: 'image/j
 pizza.save!
 
 file_schemas = URI.open('https://cdn.pixabay.com/photo/2016/12/09/18/30/database-schema-1895779_1280.png')
-schemas = User.new(nickname: "clairebear", password: "123456", email: 'claire@gmail.com', gender: "female", preferred_date_ideas: "We show each other our DB schemas ;)", orientation: "straight",  about_me: "I'm a teacher at Le Wagon and I love coding and helping peopel perfect their projects!", age: 29)
+schemas = User.new(nickname: "clairebear", password: "123456", email: 'claire@gmail.com', gender: "female", preferred_date_ideas: "We show each other our DB schemas ;)", orientation: "straight", about_me: "I'm a teacher at Le Wagon and I love coding and helping peopel perfect their projects!", age: 29)
 schemas.photo.attach(io: file_schemas, filename: 'schemas.png', content_type: 'image/png')
 schemas.save!
 
@@ -65,3 +65,11 @@ User.all.each do |user|
   end
 end
 puts "User Interests newd"
+
+puts "icebreakers new"
+
+icebreakers = ['Given the choice of anyone in the world, whom would you want as a dinner guest?', 'Would you like to be famous? In what way?', 'Before making a telephone call, do you ever rehearse what you are going to say? Why?', 'What would constitute a perfect day for you?', 'When did you last sing to yourself? To someone else?', 'If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?', 'Do you have a secret hunch about how you will die?', 'Name three things you and your partner appear to have in common.', 'For what in your life do you feel most grateful?', 'If you could change anything about the way you were raised, what would it be?', 'If you could wake up tomorrow having gained any one quality or ability, what would it be?', 'If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?', 'Is there something that you have dreamed of doing for a long time? Why havent you done it?', 'What is the greatest accomplishment of your life?', 'What do you value most in a friendship?', 'What is your most treasured memory?', 'What is your most terrible memory?', 'If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?', 'What does friendship mean to you?', 'What roles do love and affection play in your life?”, “Alternate sharing something you consider a positive characteristic of your partner. Share a total of five items.”, “How close and warm is your family? Do you feel your childhood was happier than most other peoples?', 'How do you feel about your relationship with your mother?', 'Complete this sentence: I wish I had someone with whom I could share ... ', 'If you were going to become a close friend with your partner, please share what would be important for him or her to know.', 'When did you last cry in front of another person? Or byy yourself?', "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why have not you told them yet?", 'Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?']
+
+icebreakers.each do |icebreaker|
+  Icebreaker.create!(content: icebreaker)
+end
