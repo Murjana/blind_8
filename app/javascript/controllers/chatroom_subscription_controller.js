@@ -13,6 +13,7 @@ export default class extends Controller {
         this.messagesTarget.insertAdjacentHTML("beforeend", message)
         // As soon as you inject the chat, the chat will appear without the need to scroll down
         this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+        
       } }
     )
   }
