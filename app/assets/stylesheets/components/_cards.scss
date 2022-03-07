@@ -77,8 +77,6 @@
   border-radius: 50%;
   object-fit: cover;
   width: 150px;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
 }
 
 .card-product h2 {
@@ -110,10 +108,16 @@
     color: black;
     font-weight: bold;
     margin: 5px;
+    text-decoration: none;
   }
 }
 
 .card-containter {
   align-items: center;
 }
+
+a{
+  text-decoration: none;
+}
+
 
