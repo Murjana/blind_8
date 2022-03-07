@@ -3,7 +3,9 @@
     <% @users.each do |user| %>
       <div class="card-product">
         <div class="container-card-image">
+        <% if user.photo.attached? %>
           <%= cl_image_tag user.photo.key, height: 300, width: 400, crop: :fill%>
+        <% end %>
         </div>
         <div class="card-containter">
           <div class="card-product-infos">
