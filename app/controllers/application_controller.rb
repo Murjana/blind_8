@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :orientation, :gender, :preferred_date_ideas, :about_me, :age, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :orientation, :gender, :zodiac, :preferred_date_ideas, :about_me, :age, :photo])
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :orientation, :gender, :preferred_date_ideas, :about_me, :age, :photo])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :orientation, :zodiac, :gender, :preferred_date_ideas, :about_me, :age, :photo])
   end
   # helper_method :resource_name, :resource, :devise_mapping, :resource_class
   # #methods for sign up as a homepage
