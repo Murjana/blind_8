@@ -11,18 +11,14 @@ class ChatroomsController < ApplicationController
     @chatrooms = @chatrooms_a + @chatrooms_b
   end
 
-  def chatroom_params
-    params.require(:chatroom).permit(:user_a_id, :user_b_id)
+  def create
+    @chatroom = Chatroom.find_by(user_a_id: params[:user_a_id], user_b_id: current_user.id) #Check if  chatroom for two users exisit
+    @chatroom = Chatroom.new(user_a_id: params[:user_a_id], user_b_id: current_user.id) if @chatroom.nil? # creata new chatroom when there is no previous chatroom
+    @chatroom.save
+    redirect_to chatroom_path(@chatroom)
   end
 
+
+
+
 end
-
-
-#max_length = first(selector here).value
-
-#if max_length.length > 255
- #   puts 'Limit exceeds 255 characters - error'
-#else
- #   puts 'Limit is 255 characters - pass'
-    #end
-#end
