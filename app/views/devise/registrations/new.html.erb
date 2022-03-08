@@ -1,3 +1,4 @@
+
 <div class="container-registration">
   <%= image_tag "couple.png", :class => "medium-logo" %>
 </div>
@@ -25,24 +26,58 @@
                 required: true,
                 wrapper: :input_group,
                 input_html: { autocomplete: "age" } %>
+    <%= f.input :about_me,
+            required: true,
+            wrapper: :input_group,
+            input_html: { autocomplete: "about_me" } %>
+    <%= f.input :zodiac, 
+            wrapper: :input_group,
+            as: :select,
+            collection: ['♈Aries', '♉Taurus', '♊Gemini', "♋Cancer", "♌Leo", "♍Virgo", "♎Libra", "♏Scorpio", '♐Sagittarius', '♑Capricornus', '♒Aquarius', '♓ Pisces']
+              %>
     <%= f.input :preferred_date_ideas,
                 required: true,
                 wrapper: :input_group,
                 input_html: { autocomplete: "preferred_date_ideas" } %>
-    <%= f.input :gender, collection: [["male", "male"], ["female","female"], ["non-binary","non-binary"], ["prefer not to say", "prefer not to say"]],
+    <%= f.input :gender, collection: %w(Male Female Trans-Man Trans-Woman Non-binary Non-conforming Not-sharing),
                 as: :select,
+                multiple: true, 
                 wrapper: :input_group,
                 label: 'gender' %>
 
-    <%= f.input :orientation, collection: %w(heterosexual gay bisexual),
+    <%= f.input :orientation, collection: %w(not-sharing straight gay lesbian bisexual allosexual androsexual asexual autosexual bicurious demisexual fluid graysexual gynesexual monosexual omnisexual pansexual polysexual queer questioning skoliosexual spectrasexual not-listed),
                 wrapper: :input_group,
-                label: 'orientation' %>
-    <%= f.input :photo, as: :file %>
+                label: 'orientation' %> 
+    <%= f.input :photo, as: :file, wrapper: :input_group %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, "Let's Go!", class: "btn btn-flat btn-sign-up", id: "pink" %>
-    <%= f.button :submit, "Back", class: "btn btn-flat btn-sign-up", id: "black"%>
   </div>
 <% end %>
 
-<%# <%= render "devise/shared/links" %>
+
+
+
+<%# ♈ Aries (Ram): March 21–April 19
+
+♉ Taurus (Bull): April 20–May 20
+
+♊ Gemini (Twins): May 21–June 21
+
+♋ Cancer (Crab): June 22–July 22
+
+♌ Leo (Lion): July 23–August 22
+
+♍ Virgo (Virgin): August 23–September 22
+
+♎ Libra (Balance): September 23–October 23
+
+♏ Scorpius (Scorpion): October 24–November 21
+
+♐ Sagittarius (Archer): November 22–December 21
+
+♑ Capricornus (Goat): December 22–January 19
+
+♒ Aquarius (Water Bearer): January 20–February 18
+
+♓ Pisces (Fish): February 19–March 20" %>

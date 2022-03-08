@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: 'users/registrations'
-  }
+  # devise_for :users, controllers: {
+  #   sessions: 'users/registrations'
+  # }
 
+  devise_for :users, controllers: { registrations: "registrations" }
 
   root to: 'pages#home'
 
 
   resources :users, only: [:index, :show]
 
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
 

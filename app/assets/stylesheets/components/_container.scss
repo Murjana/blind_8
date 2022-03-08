@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .container-registration {
@@ -19,4 +20,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 90px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
