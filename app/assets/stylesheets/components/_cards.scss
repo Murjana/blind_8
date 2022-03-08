@@ -70,7 +70,6 @@
 //   }
 // }
 
-
 .card-product img {
   height: 150px;
   width: 120px;
@@ -100,8 +99,9 @@
     color: black;
     font-size: 12px;
     line-height: 1.4;
-    opacity: .7;
+    opacity: 0.7;
     margin-top: 8px;
+    font-size: 25px;
   }
 
   h4 {
@@ -112,12 +112,20 @@
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .card-containter {
   align-items: center;
 }
 
+
+.card-title {
+  padding-top: 40px;
+  padding-bottom: 63px;
+}
+=======
 a{
   text-decoration: none;
 }
-
-

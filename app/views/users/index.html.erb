@@ -1,57 +1,23 @@
-<div class="container mt-3">
-      <div class="container" data-controller="notification">
-        <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">
-         "Your question has been sent to the user"
-          <button type="button" class="btn-close" data-action="click->notification#close">
-            </button>
-      </div>
-
 <div class="index-container">
   <div class="row">
     <% @users.each do |user| %>
+     <%= link_to user do %>
       <div class="card-product">
         <div class="container-card-image">
-        <% if user.photo.attached? %>
           <%= cl_image_tag user.photo.key, height: 300, width: 400, crop: :fill%>
-
-          </div>
-          <div class="card-containter">
-          <%= link_to user do %>
-
-        <% end %>
         </div>
         <div class="card-containter">
-
           <div class="card-product-infos">
-            <h4><%= user.nickname.capitalize() %></h4>
-            <p><%= user.preferred_date_ideas %></p>
+            <h4><%= user.nickname.capitalize %></h4>
+            <p><%= user.age %></p>
+
           </div>
-            <div class="card-product-infos">
-            <a class="btn btn-flat btn-sign-up" id="poke" href="#" data-action="click->notification#poke">Poke</a>
+          <div class="card-product-infos">
+            <a class="btn btn-flat btn-sign-up", id="poke", href="#">Poke</a>
           </div>
         </div>
       </div>
-      <% end %>
     <% end %>
+  <% end %>
   </div>
 </div>
-</div>
-
-<%#
-
-
-<div class="col-md-4">
-        <div class="user-card">
-          <div class="user-card-content">
-            <div class="user-card-title">
-          <%= cl_image_tag user.photo.key, height: 300, width: 400, crop: :fill %>
-              <%# <h4><%= user.nickname </h4> %>
-            <%# </div> %>
-            <%# <p><%= user.preferred_date_ideas</p>
-            <%# <div class="user-card-actions"> %>
-            <%# <a class="btn btn-flat" href="#">Poke</a> %>
-            <%# <div class="fairy-card-actions">
-            <%= link_to "View", user_path(user) %>
-          <%# </div>
-        </div>
-      </div> %>
