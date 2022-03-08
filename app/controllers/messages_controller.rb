@@ -13,8 +13,10 @@ class MessagesController < ApplicationController
         render_to_string(partial: "message", locals: { message:
         @message })
       )
-      @chatroom.counter += 1
-      @chatroom.save
+      # The counter cache may seem mysterious, but it’s not that complicated.
+      # It’s just a database column storing the number of children, with the value automatically updated.
+      #@chatroom.counter += 1
+      #@chatroom.save
 
     else
       render "chatrooms/show"
