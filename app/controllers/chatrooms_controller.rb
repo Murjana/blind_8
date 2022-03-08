@@ -16,7 +16,6 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.new(user_a_id: params[:user_a_id], user_b_id: current_user.id) if @chatroom.nil? # creata new chatroom when there is no previous chatroom
     @chatroom.save
     redirect_to chatroom_path(@chatroom)
-
   end
 
 
