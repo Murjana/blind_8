@@ -1,11 +1,11 @@
-
-       <div class="container" data-controller="notification">
+<%# This code snippet was for the alert %>
+       <%# <div class="container" data-controller="notification">
         <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">
          "Your question has been sent to the user"
           <button type="button" class="btn-close" data-action="click->notification#close">
             </button>
       </div>
-    </div>
+    </div> %>
 
     <div class="container mt-3">
         <div class="col-md-4 mt-4">
@@ -14,8 +14,7 @@
     		        <div class="card-img-block">
     		            <img class="card-img-top" src="<%= cl_image_path @user.photo.key, height: 300, width: 400, crop: :fill%> " alt="Card image cap"></div>
                         <div class="card-body pt-0">
-                              <h1 class="card-title"><%= @user.nickname.capitalize %></h1>
-                                  <h1 class="card-title"><%= @user.age %></h1>
+                              <h1 class="card-title"><%= @user.nickname.capitalize %>, <%= @user.age %></h1>
                                   <div class="card-product-infos">
                                 <a class="btn btn-flat btn-sign-up" id="poke" href="#" data-action="click->notification#poke">Poke</a>
                                 </div>

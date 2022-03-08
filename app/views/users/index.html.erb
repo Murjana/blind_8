@@ -1,3 +1,13 @@
+ <%# This code snippet is for the alert message %>
+
+ <%# <div class="container" data-controller="notification">
+        <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">
+         "Your question has been sent to the user"
+          <button type="button" class="btn-close" data-action="click->notification#close">
+            </button>
+      </div>
+    </div> %>
+
 <div class="index-container">
   <div class="row">
     <% @users.each do |user| %>
@@ -8,8 +18,8 @@
         </div>
         <div class="card-containter">
           <div class="card-product-infos">
-            <h4><%= user.nickname %></h4>
-            <p><%= user.preferred_date_ideas %></p>
+            <h4><%= user.nickname.capitalize %></h4>
+            <p><%= user.age %></p>
 
           </div>
           <div class="card-product-infos">
@@ -18,7 +28,7 @@
         </div>
       </div>
     <% end %>
-        <% end %>
+  <% end %>
   </div>
 </div>
 
