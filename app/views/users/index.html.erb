@@ -13,7 +13,7 @@
 
           </div>
           <div class="card-product-infos">
-            <a class="btn btn-flat btn-sign-up", id="poke", href="#">Poke</a>
+          <%= link_to "poke", chatrooms_path(user_a_id: user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
           </div>
         </div>
       </div>
