@@ -6,7 +6,9 @@
           <%= cl_image_tag user.photo.key, crop: :fill%>
           <div class="card-product-infos">
             <h2><%= user.nickname.capitalize %></h2>
-            <p><%= user.about_me %></p>
+            <p><strong>My ideal date:</strong> <%= user.preferred_date_ideas %></p>
+            <p><strong>Zodiac: </strong><%= user.zodiac %></p>
+            <p><strong>Zodiac: </strong><%= user.age %></p>
           </div>
         </div>
         <a class="btn btn-flat btn-sign-up", id="poke", href="#">Poke</a>
