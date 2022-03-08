@@ -7,33 +7,15 @@
     <%= link_to user do %>
       <div class="card-product">
         <div class="container-card-image">
-<<<<<<< HEAD
-          <%= cl_image_tag user.photo.key, height: 300, width: 400, crop: :fill%>
-        </div>
-        <div class="card-containter">
-          <div class="card-product-infos">
-            <h4><%= user.nickname.capitalize %></h4>
-            <p><%= user.age %></p>
-
-          </div>
-          <div class="card-product-infos">
-          <%= link_to "poke", chatrooms_path(user_a_id: user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
-=======
           <%= cl_image_tag user.photo.key, crop: :fill%>
           <div class="card-product-infos card-product-infos-index">
             <h2><%= user.nickname.capitalize %>, <%= user.age %></h2>
             <p><%= user.preferred_date_ideas %></p>
             <p id="zodiac"><%= user.zodiac %></p>
->>>>>>> 383da34d2668a0655606d04568eae0bc1f03087c
           </div>
         </div>
-        <a class="btn btn-flat btn-sign-up btn-index", id="poke", href="#">Poke</a>
+        <%= link_to "poke", chatrooms_path(user_a_id: user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
       </div>
     <% end %>
   <% end %>
-<<<<<<< HEAD
-  </div>
 </div>
-=======
-</div>
->>>>>>> 383da34d2668a0655606d04568eae0bc1f03087c
