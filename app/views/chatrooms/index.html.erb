@@ -1,13 +1,14 @@
   <% if !@chatrooms.empty? %>
     <h1>Your blind loved ones</h1>
-    <h3><%= current_user.nickname %>'s Messages</h3>
+    <h1><%= current_user.nickname %>'s Messages</h1>
     <ul>
       <% @chatrooms.first(8).each do |chatroom| %>
         <li>
-
-          <%= link_to "#{chatroom.user_a.nickname}", chatroom_path(chatroom) %>
-
-
+          <% if chatroom.user_a == current_user  %>
+            <%= link_to "#{chatroom.user_b.nickname}", chatroom_path(chatroom) %>
+          <% else %>
+            <%= link_to "#{chatroom.user_a.nickname}", chatroom_path(chatroom) %>
+          <% end %>
         </li>
       <% end %>
     </ul>
