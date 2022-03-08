@@ -1,17 +1,20 @@
-<div class="index-container">
+<div class="container-registration">
+  <%= image_tag "couple.png", :class => "medium-logo" %>
+</div>
+
+<div class="index-container index-container-padding">
   <% @users.each do |user| %>
     <%= link_to user do %>
       <div class="card-product">
         <div class="container-card-image">
           <%= cl_image_tag user.photo.key, crop: :fill%>
-          <div class="card-product-infos">
-            <h2><%= user.nickname.capitalize %></h2>
-            <p><strong>My ideal date:</strong> <%= user.preferred_date_ideas %></p>
-            <p><strong>Zodiac: </strong><%= user.zodiac %></p>
-            <p><strong>Zodiac: </strong><%= user.age %></p>
+          <div class="card-product-infos card-product-infos-index">
+            <h2><%= user.nickname.capitalize %>, <%= user.age %></h2>
+            <p><%= user.preferred_date_ideas %></p>
+            <p id="zodiac"><%= user.zodiac %></p>
           </div>
         </div>
-        <a class="btn btn-flat btn-sign-up", id="poke", href="#">Poke</a>
+        <a class="btn btn-flat btn-sign-up btn-index", id="poke", href="#">Poke</a>
       </div>
     <% end %>
   <% end %>

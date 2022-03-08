@@ -44,12 +44,11 @@
   overflow: hidden;
   border-radius: 40px;
   position: relative;
-  height: 170px;
-  padding: 0 16px 16px 16px;
+  height: 200px;
+  padding: 16px 16px 16px 16px;
   background: white;
   box-shadow: 0 0 10px $logo-pink;
   display: flex;
-  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -78,6 +77,7 @@
   object-fit: cover;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
+  flex-shrink: 0;
 }
 
 // .card-product h2 {
@@ -99,7 +99,7 @@
 
   p {
     color: black;
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1.4;
     opacity: 0.7;
     margin-top: 8px;
@@ -132,4 +132,23 @@ a {
 
 a{
   text-decoration: none;
+}
+
+.card-product-infos-index {
+  padding-bottom: 34px;
+  p {
+    margin: 9px 0px !important;
+  }
+  h2 {
+    margin: 5px 0px !important;
+  }
+
+  #zodiac {
+    margin: 9px 0px !important;
+  }
+}
+
+.index-container-padding {
+  padding-top: 30px;
+  padding-bottom: 75px;
 }
