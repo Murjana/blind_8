@@ -15,7 +15,11 @@
                         <div class="card-body pt-0">
                               <h1 class="card-title"><%= @user.nickname.capitalize %>, <%= @user.age %></h1>
                                   <div class="card-product-infos">
-                                <a class="btn btn-flat btn-sign-up" id="poke" href="#" data-action="click->notification#poke">Poke</a>
+                                  <% if @user == current_user %>
+                                    <%= link_to "edit", "#", class: "btn btn-flat btn-sign-up", id: "poke", method: "patch"%>
+                                  <% else %>
+                                    <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
+                                  <% end  %>
                                 </div>
                               </div>
                             </div>
