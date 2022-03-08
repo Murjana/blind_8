@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   validates :zodiac, presence: true
   # inclusion: { in: %w(♈Aries ♉Taurus ♊Gemini ♋Cancer ♌Leo ♍Virgo ♎Libra ♏Scorpio ♐Sagittarius ♑Capricornus ♒Aquarius ♓Pisces)}
-  
+
 
 
 
