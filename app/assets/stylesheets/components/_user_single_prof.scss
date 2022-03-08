@@ -8,6 +8,7 @@ body{
 /*Profile Card 5*/
 .profile-card-5{
     margin-top:20px;
+    border-radius: 25px;
 }
 .profile-card-5 .btn{
     border-radius:2px;
@@ -38,4 +39,8 @@ body{
 .profile-card-5 .btn-primary{
     background-color:#4E5E30;
     border-color:#4E5E30;
+}
+
+.mt-3{
+  font-size: 15px;
 }
