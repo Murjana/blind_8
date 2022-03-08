@@ -11,7 +11,7 @@
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
-  </div>
+
   <%= simple_form_for [@chatroom, @message],
     remote: true,
     html: {class: "d-flex"} do |f|%>

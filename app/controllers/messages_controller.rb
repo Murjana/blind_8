@@ -13,8 +13,19 @@ class MessagesController < ApplicationController
         render_to_string(partial: "message", locals: { message:
         @message })
       )
+      # The counter cache may seem mysterious, but it’s not that complicated.
+      # It’s just a database column storing the number of children, with the value automatically updated.
+      #@chatroom.counter += 1
+      #@chatroom.save
+
     else
       render "chatrooms/show"
+    end
+
+    def destroy
+      @message = Message.find(params[:id])
+      @message.destroy
+      redirect_to #this should be re-directed to the list of pokers
     end
   end
 

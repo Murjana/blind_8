@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_171005) do
     t.bigint "user_b_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "counter"
     t.index ["user_a_id"], name: "index_chatrooms_on_user_a_id"
     t.index ["user_b_id"], name: "index_chatrooms_on_user_b_id"
   end

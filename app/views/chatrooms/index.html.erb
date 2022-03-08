@@ -1,5 +1,17 @@
-<h1> Your blind loved ones</h1>
+  <% if !@chatrooms.empty? %>
+    <h1>Your blind loved ones</h1>
+    <h3><%= current_user.nickname %>'s Messages</h3>
+    <ul>
+      <% @chatrooms.first(8).each do |chatroom| %>
+        <li>
 
-<% @chatrooms.each do |chatroom| %>
-  <h3><%= chatroom.user_a %></h3>
-<% end  %>
+          <%= link_to "#{chatroom.user_a.nickname}", chatroom_path(chatroom) %>
+
+
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <h1> You do not have any chats yet</h1>
+    <%= link_to "start browsing", users_path %>
+  <% end %>
