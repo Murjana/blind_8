@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   has_many :user_interests
   has_many :interests, through: :user_interests
-  has_many :chatrooms_as_user_a, class_name: "Chatroom", foreign_key: :user_a_id
-  has_many :chatrooms_as_user_b, class_name: "Chatroom", foreign_key: :user_b_id
+  has_many :chatrooms_as_user_a, class_name: "Chatroom", foreign_key: :user_a_id, dependent: :destroy
+  has_many :chatrooms_as_user_b, class_name: "Chatroom", foreign_key: :user_b_id, dependent: :destroy
   has_many :messages
   has_many :answers_as_asker, class_name: "Answer", foreign_key: :asker_id
   has_many :answers_as_replier, class_name: "Answer", foreign_key: :replier_id
@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   validates :zodiac, presence: true
   # inclusion: { in: %w(♈Aries ♉Taurus ♊Gemini ♋Cancer ♌Leo ♍Virgo ♎Libra ♏Scorpio ♐Sagittarius ♑Capricornus ♒Aquarius ♓Pisces)}
-  
+
 
 
 
