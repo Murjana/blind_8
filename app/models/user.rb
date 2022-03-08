@@ -13,10 +13,22 @@ class User < ApplicationRecord
   has_many :answers_as_replier, class_name: "Answer", foreign_key: :replier_id
   has_one_attached :photo
 
+
   validates :password, :email, :age, :preferred_date_ideas, presence: true
-      # validates :about_me, presence: true, length: { in: 30..200}
+  validates :about_me, presence: true, length: { maximum: 3000,
+    too_long: "%{count} characters is the maximum allowed" }
+
+
+
+
+
+  validates :zodiac, presence: true, inclusion: { in: %w(Arie, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces) }
+
+
+
 
   validates :nickname, presence: true, uniqueness: true
   validates :orientation, presence: true, inclusion: { in: %w(not-sharing straight gay lesbian bisexual allosexual androsexual asexual autosexual bicurious demisexual fluid graysexual gynesexual monosexual omnisexual pansexual polysexual queer questioning skoliosexual spectrasexual not-listed) }
   validates :gender, presence: true, inclusion: { in: ['Male', 'Female', 'Trans-Man', 'Trans-Woman', 'Non-binary', 'Non-conforming', 'Not-sharing'] }
+
 end

@@ -11,6 +11,7 @@ UserInterest.destroy_all
 User.destroy_all
 Interest.destroy_all
 Icebreaker.destroy_all
+Chatroom.destroy_all
 
 puts "Deleted all instances of database"
 
@@ -19,7 +20,7 @@ botanest = User.new(nickname: "mermaid91", password: "123456", email: "oliv@gmai
 botanest.photo.attach(io: file_botanest, filename: 'botanest.jpg', content_type: 'image/jpg')
 botanest.save!
 file_mr_right = URI.open('https://cdn.pixabay.com/photo/2019/02/22/10/26/swan-4013225_960_720.jpg')
-mr_right = User.new(nickname: "missmoin", password: "654321", email: "narmina@gmail.com", gender: "male" , preferred_date_ideas: "dinner and a movie :)", orientation: "bisexual",  about_me: "I'm looking for friends but also hoping to meet mr. right. I've been described as a good listener and fun person to be around", age: 26)
+mr_right = User.new(nickname: "missmoin", password: "654321", email: "narmina@gmail.com", gender: "male", preferred_date_ideas: "dinner and a movie :)", orientation: "bisexual", about_me: "I'm looking for friends but also hoping to meet mr. right. I've been described as a good listener and fun person to be around", age: 26)
 mr_right.photo.attach(io: file_mr_right, filename: 'mr_right.jpg', content_type: 'image/jpg')
 mr_right.save!
 
@@ -54,10 +55,12 @@ kissy.photo.attach(io: file_kissy, filename: 'kissy.jpg', content_type: 'image/p
 
 puts "Users newd"
 
-interests = ["Film", "Sports", "Books & Literature", "Politics & Current Events", "Food & Drink", "Arts & Museums", "Yoga & Meditation", "Coding"]
+interests = ['Adventure parks', 'Amusement Park', 'Animal', 'Antiques', 'Antiquing', 'Astrology', 'Astronomy', 'Back packing', 'Badminton', 'Baking', 'Ballet', 'Coding', 'Sculpture', 'Self-Improvement', 'Singing', 'Diving', 'Skincare', 'Snorkeling', 'Snow Biking', 'Socializing', 'Social Networking', 'Swimming', 'Tarot', 'Traveling', 'Volunteering', 'Walking', 'Watching Movies', 'Weight training', 'Weightlifting', 'Wines', 'Wrestling', 'Writing', 'Zumba']
+
 interests.each do |interest|
   Interest.create!(content: interest)
 end
+
 puts "Interests newd"
 User.all.each do |user|
   3.times do
@@ -73,3 +76,14 @@ icebreakers = ['Given the choice of anyone in the world, whom would you want as 
 icebreakers.each do |icebreaker|
   Icebreaker.create!(content: icebreaker)
 end
+
+Puts "chatrooms created"
+Chatroom.create!(user_a: forestman, user_b: schemas)
+Chatroom.create!(user_a: forestman, user_b: botanest)
+Chatroom.create!(user_a: forestman, user_b: pizza)
+Chatroom.create!(user_a: forestman, user_b: tarzan)
+Chatroom.create!(user_a: forestman, user_b: mr_right)
+Chatroom.create!(user_a: forestman, user_b: kissy)
+Chatroom.create!(user_a: forestman, user_b: boulder)
+Chatroom.create!(user_a: tarzan, user_b: kissy)
+Chatroom.create!(user_a: tarzan, user_b: pizza)
