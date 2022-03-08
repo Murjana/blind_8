@@ -30,10 +30,10 @@
             required: true,
             wrapper: :input_group,
             input_html: { autocomplete: "about_me" } %>
-    <%= f.input :interests, 
+    <%= f.input :zodiac, 
             wrapper: :input_group,
             as: :select,
-            collection: [['♈ Aries'], ['♉ Taurus'], ['♊ Gemini'], ["♋ Cancer"], ["♌ Leo"], ["♍ Virgo"], ["♎ Libra"], ["♏ Scorpio"],['♐ Sagittarius'], ['♑ Capricornus'], ['♒ Aquarius'], ['♓ Pisces'] ]
+            collection: ['♈Aries', '♉Taurus', '♊Gemini', "♋Cancer", "♌Leo", "♍Virgo", "♎Libra", "♏Scorpio", '♐Sagittarius', '♑Capricornus', '♒Aquarius', '♓ Pisces']
               %>
     <%= f.input :preferred_date_ideas,
                 required: true,
