@@ -5,8 +5,16 @@ class ChatroomsController < ApplicationController
   end
 
   def index
-    @chatrooms = current_user.chatrooms.first(8)
+    # @chatrooms = current_user.chatrooms.first(8)
+    @chatrooms_a = Chatroom.where(user_a_id: current_user.id)
+    @chatrooms_b = Chatroom.where(user_b_id: current_user.id)
+    @chatrooms = @chatrooms_a + @chatrooms_b
   end
+
+  def chatroom_params
+    params.require(:chatroom).permit(:user_a_id, :user_b_id)
+  end
+
 end
 
 
