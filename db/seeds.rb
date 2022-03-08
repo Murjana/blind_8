@@ -7,7 +7,7 @@ require "open-uri"
 #   movies = Movie.new([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.new(name: 'Luke', movie: movies.first)
 
-#UserInterest.destroy_all
+UserInterest.destroy_all
 #Interest.destroy_all
 Icebreaker.destroy_all
 Chatroom.destroy_all
@@ -66,13 +66,13 @@ interests.each do |interest|
   Interest.create!(content: interest)
 end
 
-puts "Interests newd"
-User.all.each do |user|
-  3.times do
-    UserInterest.create!(user: user, interest: Interest.all.sample)
-  end
-end
-puts "User Interests newd"
+# puts "Interests newd"
+# User.all.each do |user|
+#   3.times do
+#     UserInterest.create!(user: user, interest: Interest.all.sample)
+#   end
+# end
+# puts "User Interests newd"
 
 puts "icebreakers new"
 
