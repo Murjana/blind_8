@@ -13,8 +13,17 @@ class MessagesController < ApplicationController
         render_to_string(partial: "message", locals: { message:
         @message })
       )
+      @chatroom.counter += 1
+      @chatroom.save
+
     else
       render "chatrooms/show"
+    end
+
+    def destroy
+      @message = Message.find(params[:id])
+      @message.destroy
+      redirect_to #this should be re-directed to the list of pokers
     end
   end
 
