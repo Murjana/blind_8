@@ -46,7 +46,7 @@ ladybug.photo.attach(io: file_ladybug, filename: 'ladybug.jpg', content_type: 'i
 ladybug.save!
 
 file_malis = URI.open('https://st4.depositphotos.com/5891300/29925/v/1600/depositphotos_299250468-stock-illustration-tongue-showing-out-of-mouth.jpg')
-malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under the stars with only the sound of our deep thoughts! Take me to Sahara!", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
+malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under the stars with only the sound of our deep thoughts!", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
 malis.photo.attach(io: file_malis, filename: 'malis.jpg', content_type: 'image/jpg')
 malis.save!
 
