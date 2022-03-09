@@ -13,19 +13,26 @@
     		        <div class="card-img-block">
     		            <img class="card-img-top" src="<%= cl_image_path @user.photo.key, height: 300, width: 400, crop: :fill%> " alt="Card image cap"></div>
                         <div class="card-body pt-0">
-                              <h1 class="card-title"><%= @user.nickname.capitalize %>, <%= @user.age %></h1>
-                                  <div class="card-product-infos">
-                                  <% if @user == current_user %>
-                                    <%= link_to "edit", "#", class: "btn btn-flat btn-sign-up", id: "poke", method: "patch"%>
-                                  <% else %>
-                                    <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
-                                  <% end  %>
-                                </div>
+                              <h1 class="card-title"><%= @user.nickname.capitalize %>, <%= @user.age %> <%= @user.zodiac %></h1>
+    		                                  <div class="card-img-block">
+                                            <strong><p>About me:</p></strong> <p><%= @user.about_me %></p>
+                                            <br>
+                                              </div>
+                                                   <strong><p>Prefered ideas:</p></strong> <p><%= @user.preferred_date_ideas %></p>
+
+                                        <% if @user == current_user %>
+                                          <%= link_to "edit", "#", class: "btn btn-flat btn-sign-up", id: "poke", method: "patch"%>
+                                        <% else %>
+                                          <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
+                                        <% end  %>
+                                  </div>
                               </div>
-                            </div>
-                        <p class="mt-3 w-100 float-left text-center"><%= @user.about_me %></p>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                   </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
