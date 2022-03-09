@@ -9,9 +9,9 @@
         <div class="container-card-image">
           <%= cl_image_tag user.photo.key, crop: :fill%>
           <div class="card-product-infos card-product-infos-index">
-            <h2><%= user.nickname.capitalize %>, <%= user.age %></h2>
+            <h2 class="index-h2"><%= user.nickname.capitalize %>, <%= user.age %> </h2>
             <p><%= user.preferred_date_ideas %></p>
-            <p id="zodiac"><%= user.zodiac %></p>
+            <p id="zodiac"><em><%= user.zodiac[1..-1]%></em></p>
           </div>
         </div>
         <%= link_to "poke", chatrooms_path(user_a_id: user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
