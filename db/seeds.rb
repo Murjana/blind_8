@@ -88,7 +88,7 @@ puts "chatrooms created"
 Chatroom.create!(user_a: ladybug, user_b: nina)
 
 
-Chatroom.create!(user_a: malis, user_b: ladygogo)
+Chatroom.create!(user_a: penny, user_b: ladygogo)
 
 Chatroom.create!(user_a: malis, user_b: clown)
 Chatroom.create!(user_a: malis, user_b: madam_yogi)
