@@ -1,16 +1,16 @@
-<body>
-    <nav class="mobile-nav">
 
-        <a href="http://localhost:3000/users" class="bloc-icon">
-          <img src="https://www.svgrepo.com/show/18282/search.svg" alt="">
-        </a>
-        <a href="#" class="bloc-icon">
-          <img src="https://www.svgrepo.com/show/139863/message.svg" alt="">
-        </a>
+  <nav class="mobile-nav">
 
-        <%= link_to user_path(current_user), class: "bloc-icon" do %>
-          <img src="https://www.svgrepo.com/show/303848/profile.svg" alt="">
-        <% end %>
-        </a>
-    </nav>
-</body>
+ <%= link_to users_path(current_user), class: "bloc-icon" do %>
+        <img src="https://www.svgrepo.com/show/18282/search.svg" alt="">
+    <% end %>
+
+       <%= link_to chatrooms_path(current_user), class: "bloc-icon" do %>
+        <img src="https://www.svgrepo.com/show/139863/message.svg" alt="">
+      <% end %>
+
+      <%= link_to user_path(current_user), class: "bloc-icon" do %>
+        <img src="https://www.svgrepo.com/show/303848/profile.svg" alt="">
+      <% end %>
+
+  </nav>
