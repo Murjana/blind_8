@@ -20,24 +20,25 @@ puts "Deleted all instances of database"
 # validates :zodiac, presence: true, inclusion: { in: %w(♈Aries ♉Taurus ♊Gemini ♋Cancer ♌Leo ♍Virgo ♎Libra ♏Scorpio ♐Sagittarius ♑Capricornus ♒Aquarius ♓Pisces) }
 
 
-file_botanest = URI.open('https://s3.amazonaws.com/lowres.cartoonstock.com/music-botanical_violinist-botanists-green_fingers-gardener-flower-rbon2978_low.jpg')
-botanest = User.new(nickname: "mermaid91", zodiac: "♋Cancer", orientation: "bisexual", password: "123456", email: "oliv@gmail.com", gender: "Male", preferred_date_ideas: "wine and dine", about_me: "I'm a botanist who loves plant and I'm looking for someone to grow with 💐", age: 26)
-botanest.photo.attach(io: file_botanest, filename: 'botanest.jpg', content_type: 'image/jpg')
-botanest.save!
-file_mr_right = URI.open('https://cdn.pixabay.com/photo/2019/02/22/10/26/swan-4013225_960_720.jpg')
-mr_right = User.new(nickname: "missmoin", zodiac: "♋Cancer", password: "654321", email: "narmina@gmail.com", orientation: "bisexual", gender: "Male", preferred_date_ideas: "dinner and a movie :)", about_me: "I'm looking for friends but also hoping to meet mr. right. I've been described as a good listener and fun person to be around", age: 26)
-mr_right.photo.attach(io: file_mr_right, filename: 'mr_right.jpg', content_type: 'image/jpg')
-mr_right.save!
+file_ladygogo = URI.open('https://images.saatchiart.com/saatchi/1781870/art/8396855/7461213-HSC00002-6.jpg')
+ladygogo = User.new(nickname: "Lady Gogo", zodiac: "♐Sagittarius", orientation: "bisexual", password: "123456", email: "gogo@gmail.com", gender: "Female", about_me: "Im an artist based in Berlin. I moved here from Santiago, Chila over ten years ago and have fallen in love with the city ever since. I see myself as an explorer, someone who likes to take risks and try new things. Ive been called a feather in the wind by my friends, someone who goes with the flow of things and likes to see where life takes me. I joined this app because Im genuinely curious about meeting new people without the bullshit expectations around what someone is wearing or how someone photographs. I think Im attractive in real life, but that doesnt mean much to me these days anymore to be honest. At this point Im just looking for really good connection and inspiration.", preferred_date_ideas: "I love museums. Art is very close to my heart. I would jump on any opportunity to explore:) ", age: 26)
+ladygogo.photo.attach(io: file_ladygogo, filename: 'botanest.jpg', content_type: 'image/jpg')
+ladygogo.save!
 
-file_boulder = URI.open('https://cdn.pixabay.com/photo/2017/06/19/02/21/devils-marbles-2417952_960_720.jpg')
-boulder = User.new(nickname: "chriscross", zodiac: "♋Cancer", orientation: "bisexual", password: "123465", email: "chris@gmail.com", gender: "Non-binary", preferred_date_ideas: "bouldering or something physically active",  about_me: "I'm Chris. I'm open to absolutely anything. I love new experiences and the opportunity to meet new people. I'd love to go on a blind date. I've never been on one before. Low expectations.", age: 30)
-boulder.photo.attach(io: file_boulder, filename: 'boulder.jpg', content_type: 'image/jpg')
-boulder.save!
+file_madam_yogi = URI.open('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pd237-pdburnejones00052-image_3.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1e5834b2e17eeebecccc2ec045a54540')
+madam_yogi = User.new(nickname: "Madam Yogi", zodiac: "♏Scorpio", password: "123456", email: "yogi@gmail.com", orientation: "fluid", gender: "Trans-Woman", preferred_date_ideas: "I don’t like to go out, but I really enjoy quality time at home with someone. Wine, movies, etc ;)", about_me: " I’m a professional Yoga trainer. I’ve lived in Berlin all my life. You could call me a Berliner I suppose, but I also love to travel. I’m looking mostly for casual encounters that surprise me. I dont want my dating or sex life to feel like I’m ordering a pizza. I want genuine connection, but also genuine surprise. I want to be overcome by something I never knew existed and to discover my own unconscious desires. If anything I said sounds like it might relate to you, please POKE ME.", age: 26)
+madam_yogi.photo.attach(io: file_madam_yogi, filename: 'mr_right.jpg', content_type: 'image/jpg')
+madam_yogi.save!
 
-file_tarzan = URI.open('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CF34FE43CA2F589A46B9E52EC16A92D2F9818885ED6D6CFBF22B8F217CEEC84E/scale?width=1920&aspectRatio=1.78&format=jpeg')
-tarzan = User.new(nickname: "anajrum", zodiac: "♋Cancer", orientation: "bisexual", password: "123456", email: 'murjana@gmail.com', gender: "Female", preferred_date_ideas: "We stay in and I teach you how to use figma!", about_me: "Former Tv journalist who turned into tech companies( operations side) with a passion to get more technical and more into learning how to build great projects! Will you be my Tarzan?", age: 36)
-tarzan.photo.attach(io: file_tarzan, filename: 'tarzan.jpg', content_type: 'image/jpg')
-tarzan.save!
+file_bateman = URI.open('https://freesvg.org/img/Terrified-Face.png')
+bateman = User.new(nickname: "Mr. Bateman", zodiac: "♎Libra", orientation: "questioning", password: "123465", email: "bateman@gmail.com", gender: "Male", preferred_date_ideas: "I don’t know why Im here. Ive been questioning things but I’m open to suggestions.", about_me: " I’m a business tycoon and entrepreneur. All my life I’ve been successful at what I do professionally. I take great pride in work but over the past several months I’ve realized that despite all my success I am completely alone. I’m a funny guy with many people I like to call friends but I’m looking for something deeper to fill the void. I’m not sure about myself sexually and I’m hoping to meet someone who will be kind and okay with that. I probably will not message you first because I can be shy. But let’s get a conversation going and see what happens.", age: 34)
+bateman.photo.attach(io: file_bateman, filename: 'boulder.jpg', content_type: 'image/jpg')
+bateman.save!
+
+file_clown = URI.open('https://c.pxhere.com/images/61/ac/c7a23ec6ca3bbb111b2e7d075f69-1586085.jpg!d')
+clown = User.new(nickname: "The Clown", zodiac: "♓Pisces", orientation: "spectrasexual", password: "123456", email: 'clown@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Cooking is my hobby. I cook everything. I would love to cook for you and share my skills.", about_me: " I was raised in the Laplands of Finland and moved to Berlin 3 years ago. My friend told me about this app. Apparently, she met her husband here. I didn’t quite believe her when she told me but then after seeing their messages I decided to give it a try myself. I’m hopeful something will happen. But I have to warn you, I’m not a very “normal” person. I can be a bit erratic but I also have a heart of gold. I love move through the world like a raging bull. Life is too short to waste on being graceful. I want someone who will be with me on the journey to the end.", age: 23)
+clown.photo.attach(io: file_clown, filename: 'tarzan.jpg', content_type: 'image/jpg')
+clown.save!
 
 file_ladybug = URI.open('https://img.freepik.com/free-photo/dissatisfied-cat-ladybugs-fly-around-color-sketch-cat-s-face-isolated-white-background-pencil-drawing-art-work_410993-16.jpg')
 ladybug = User.new(nickname: "Lady Bug", zodiac: "♌Leo", orientation: "fluid", password: "123456", email: 'lady@gmail.com', gender: "Female", preferred_date_ideas: " Me you and nature, a blanket we set on and we have a picnic set! Maybe your dogs too?", about_me: "I love animals in all shapes and forms, even the talking ones, wink wink! I have experienced other dating apps and I have experienced all sorts of animalistic behaviors there so I migrated here. I'm tired of posing and pretending and hoping to meet someone who is an animal lover and invested in what is behind an image! Off topic, if you count the mice on train tracks you should poke me!", age: 31)
@@ -83,12 +84,15 @@ icebreakers.each do |icebreaker|
 end
 
 puts "chatrooms created"
+
 Chatroom.create!(user_a: ladybug, user_b: nina)
-Chatroom.create!(user_a: ladybug, user_b: botanest)
-Chatroom.create!(user_a: ladybug, user_b: malis)
-Chatroom.create!(user_a: ladybug, user_b: tarzan)
-Chatroom.create!(user_a: ladybug, user_b: mr_right)
-Chatroom.create!(user_a: ladybug, user_b: penny)
-Chatroom.create!(user_a: ladybug, user_b: boulder)
-Chatroom.create!(user_a: tarzan, user_b: penny)
-Chatroom.create!(user_a: tarzan, user_b: malis)
+
+
+Chatroom.create!(user_a: malis, user_b: ladygogo)
+
+Chatroom.create!(user_a: malis, user_b: clown)
+Chatroom.create!(user_a: malis, user_b: madam_yogi)
+
+Chatroom.create!(user_a: malis, user_b: bateman)
+
+
