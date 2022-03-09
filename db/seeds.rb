@@ -46,12 +46,12 @@ ladybug.photo.attach(io: file_ladybug, filename: 'ladybug.jpg', content_type: 'i
 ladybug.save!
 
 file_malis = URI.open('https://st4.depositphotos.com/5891300/29925/v/1600/depositphotos_299250468-stock-illustration-tongue-showing-out-of-mouth.jpg')
-malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under a starry night in the desert with only the sound of your deep thoughts! Take me to Sahara:)", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
+malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under the stars with only the sound of our deep thoughts! Take me to Sahara!", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
 malis.photo.attach(io: file_malis, filename: 'malis.jpg', content_type: 'image/jpg')
 malis.save!
 
 file_nina = URI.open('https://i.pinimg.com/originals/d0/6a/8f/d06a8f48699e80003697d48695306e27.jpg')
-nina = User.new(nickname: "Ninaa", zodiac: "♓Pisces", orientation: "gynesexual", password: "123456", email: 'nina@gmail.com', gender: "Not-sharing", preferred_date_ideas: "I like pizza/movie date but we can hold a baking competition. I pride myself with my cookies!", about_me: "I have been around in the dating scene, I have dated men, women and everything between. I am here to try my luck in yet another dating platform in the hopes to find my person! I have some faith left in love! And now that I am hidden behind a screen without a face I can shamelessly admit it, and yell it I AM DESPERATE FOR LOVE!", age: 29)
+nina = User.new(nickname: "Ninaa", zodiac: "♓Pisces", orientation: "gynesexual", password: "123456", email: 'nina@gmail.com', gender: "Not-sharing", preferred_date_ideas: "I like movie dates but we can hold a baking competition. I take pride in my cookies!", about_me: "I have been around in the dating scene, I have dated men, women and everything between. I am here to try my luck in yet another dating platform in the hopes to find my person! I have some faith left in love! And now that I am hidden behind a screen without a face I can shamelessly admit it, and yell it I AM DESPERATE FOR LOVE!", age: 29)
 nina.photo.attach(io: file_nina, filename: 'nina.png', content_type: 'image/png')
 nina.save!
 
