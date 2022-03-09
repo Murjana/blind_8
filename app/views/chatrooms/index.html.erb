@@ -1,6 +1,6 @@
   <% if !@chatrooms.empty? %>
     <h1>Your blind loved ones</h1>
-    <h1><%= current_user.nickname %>'s Messages</h1>
+    <h2 class='userNickname' ><%= current_user.nickname %>'s Messages</h2>
     <ul>
       <% @chatrooms.first(8).each do |chatroom| %>
         <li>
