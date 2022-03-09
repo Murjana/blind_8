@@ -40,32 +40,32 @@ clown = User.new(nickname: "The Clown", zodiac: "♓Pisces", orientation: "spect
 clown.photo.attach(io: file_clown, filename: 'tarzan.jpg', content_type: 'image/jpg')
 clown.save!
 
-file_forestman = URI.open('https://thumbs.dreamstime.com/b/british-library-digitised-image-page-61-forest-pictures-adirondacks-original-poems-alfred-b-street-223383918.jpg')
-forestman = User.new(nickname: "alosif", zodiac: "♋Cancer", orientation: "bisexual", password: "123456", email: 'fisola@gmail.com', gender: "Male", preferred_date_ideas: "A wild night out on the town!", about_me: "I recently completed a master's degree in Sustainable Forest and Nature Management at the University of Gottingen, Germany.", age: 31)
-forestman.photo.attach(io: file_forestman, filename: 'forestman.jpg', content_type: 'image/jpg')
-forestman.save!
+file_ladybug = URI.open('https://img.freepik.com/free-photo/dissatisfied-cat-ladybugs-fly-around-color-sketch-cat-s-face-isolated-white-background-pencil-drawing-art-work_410993-16.jpg')
+ladybug = User.new(nickname: "Lady Bug", zodiac: "♌Leo", orientation: "fluid", password: "123456", email: 'lady@gmail.com', gender: "Female", preferred_date_ideas: " Me you and nature, a blanket we set on and we have a picnic set! Maybe your dogs too?", about_me: "I love animals in all shapes and forms, even the talking ones, wink wink! I have experienced other dating apps and I have experienced all sorts of animalistic behaviors there so I migrated here. I'm tired of posing and pretending and hoping to meet someone who is an animal lover and invested in what is behind an image! Off topic, if you count the mice on train tracks you should poke me!", age: 31)
+ladybug.photo.attach(io: file_ladybug, filename: 'ladybug.jpg', content_type: 'image/jpg')
+ladybug.save!
 
-file_pizza = URI.open('https://m.media-amazon.com/images/I/61REzkpeLBL._AC_SX425_.jpg')
-pizza = User.new(nickname: "yelsew", zodiac: "♋Cancer", orientation: "bisexual", password: "123456", email: 'wes@gmail.com', gender: "Female", preferred_date_ideas: "pizza and netlfix", about_me: "Prior to this, I worked in book publishing and media for 7 years between New York and London. After Le Wagon, I hope to become a fulltime freelancer or work for an exciting tech company.", age: 29)
-pizza.photo.attach(io: file_pizza, filename: 'pizza.jpg', content_type: 'image/jpg')
-pizza.save!
+file_malis = URI.open('https://st4.depositphotos.com/5891300/29925/v/1600/depositphotos_299250468-stock-illustration-tongue-showing-out-of-mouth.jpg')
+malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under a starry night in the desert with only the sound of your deep thoughts! Take me to Sahara:)", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
+malis.photo.attach(io: file_malis, filename: 'malis.jpg', content_type: 'image/jpg')
+malis.save!
 
-file_schemas = URI.open('https://cdn.pixabay.com/photo/2016/12/09/18/30/database-schema-1895779_1280.png')
-schemas = User.new(nickname: "clairebear", zodiac: "♋Cancer", orientation: "bisexual", password: "123456", email: 'claire@gmail.com', gender: "Not-sharing", preferred_date_ideas: "We show each other our DB schemas ;)", about_me: "I'm a teacher at Le Wagon and I love coding and helping peopel perfect their projects!", age: 29)
-schemas.photo.attach(io: file_schemas, filename: 'schemas.png', content_type: 'image/png')
-schemas.save!
+file_nina = URI.open('https://i.pinimg.com/originals/d0/6a/8f/d06a8f48699e80003697d48695306e27.jpg')
+nina = User.new(nickname: "Ninaa", zodiac: "♓Pisces", orientation: "gynesexual", password: "123456", email: 'nina@gmail.com', gender: "Not-sharing", preferred_date_ideas: "I like pizza/movie date but we can hold a baking competition. I pride myself with my cookies!", about_me: "I have been around in the dating scene, I have dated men, women and everything between. I am here to try my luck in yet another dating platform in the hopes to find my person! I have some faith left in love! And now that I am hidden behind a screen without a face I can shamelessly admit it, and yell it I AM DESPERATE FOR LOVE!", age: 29)
+nina.photo.attach(io: file_nina, filename: 'nina.png', content_type: 'image/png')
+nina.save!
 
-file_kissy = URI.open('https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_740,w_1100/v1555435135/shape/mentalfloss/ltprimary.jpg?itok=CKFsQwJl')
-kissy = User.new(nickname: "nuhyej",  orientation: "bisexual", zodiac: "♋Cancer", password: "123456", email: 'jeyhun@gmail.com', gender: "Trans-Woman" , preferred_date_ideas: "A classy dinner and some top-notch wine", about_me: "All the code in the world won't solve your business problems. You need to know how to use it =)", age: 30)
-kissy.photo.attach(io: file_kissy, filename: 'kissy.jpg', content_type: 'image/png')
+file_penny = URI.open('https://c.pxhere.com/images/a8/a2/446ea6ff1704cfe4d608a3a441b8-1586079.jpg!d')
+penny = User.new(nickname: "Pennywise",  orientation: "polysexual", zodiac: "♒Aquarius", password: "123456", email: 'penny@gmail.com', gender: "Male" , preferred_date_ideas: "Watch Dexter together?For real now, I would like to take you to the Planetarium", about_me: "In a nutshell i’m nuts they say, but I'm the good kind of nuts! I like to eat you , Ops did I just say that? I'm known for my bad dad jokes, well bad jokes in general to be honest so its fine if you don’t laugh. Im am ER doctor during the day and once in a while I do drag! Could this drag you to me?", age: 30)
+penny.photo.attach(io: file_penny, filename: 'penny.jpg', content_type: 'image/png')
 
 puts "Users newd"
 
 interests = ['Adventure parks', 'Amusement Park', 'Animal', 'Antiques', 'Antiquing', 'Astrology', 'Astronomy', 'Back packing', 'Badminton', 'Baking', 'Ballet', 'Coding', 'Sculpture', 'Self-Improvement', 'Singing', 'Diving', 'Skincare', 'Snorkeling', 'Snow Biking', 'Socializing', 'Social Networking', 'Swimming', 'Tarot', 'Traveling', 'Volunteering', 'Walking', 'Watching Movies', 'Weight training', 'Weightlifting', 'Wines', 'Wrestling', 'Writing', 'Zumba']
 
-interests.each do |interest|
-  Interest.create!(content: interest)
-end
+# interests.each do |interest|
+#   Interest.create!(content: interest)
+# end
 
 # puts "Interests newd"
 # User.all.each do |user|
@@ -84,12 +84,15 @@ icebreakers.each do |icebreaker|
 end
 
 puts "chatrooms created"
-Chatroom.create!(user_a: forestman, user_b: schemas)
-Chatroom.create!(user_a: forestman, user_b: ladygogo)
-Chatroom.create!(user_a: forestman, user_b: pizza)
-Chatroom.create!(user_a: forestman, user_b: clown)
-Chatroom.create!(user_a: forestman, user_b: madam_yogi)
-Chatroom.create!(user_a: forestman, user_b: kissy)
-Chatroom.create!(user_a: forestman, user_b: bateman)
-Chatroom.create!(user_a: clown, user_b: kissy)
-Chatroom.create!(user_a: clown, user_b: pizza)
+
+Chatroom.create!(user_a: ladybug, user_b: nina)
+
+
+Chatroom.create!(user_a: malis, user_b: ladygogo)
+
+Chatroom.create!(user_a: malis, user_b: clown)
+Chatroom.create!(user_a: malis, user_b: madam_yogi)
+
+Chatroom.create!(user_a: malis, user_b: bateman)
+
+
