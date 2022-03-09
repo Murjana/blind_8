@@ -86,6 +86,11 @@ ActiveRecord::Schema.define(version: 2022_03_07_171005) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "user_interests", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "interest_id", null: false
