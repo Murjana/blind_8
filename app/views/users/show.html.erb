@@ -6,7 +6,7 @@
             </button>
       </div>
     </div> %>
-
+<!-- 
     <div class="container mt-3">
         <div class="col-md-4 mt-4">
     		    <div class="card profile-card-5">
@@ -36,4 +36,24 @@
                 </div>
             </div>
         </div>
-      
+       -->
+
+       <div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.1),rgba(0,0,0,1)), url(<%= cl_image_path @user.photo.key %>);">
+        <div class="home">   
+            <div class="container">
+              <h1><%= @user.nickname.capitalize %></h1>
+              <p><strong><%= @user.about_me %></strong></p>
+              <p id="zodiac-gender"><em><%= @user.zodiac %>, <%= @user.orientation %>, <%= @user.gender %></em></p>
+            <% if @user == current_user %>
+              <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %> 
+            <% else %>
+              <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %>
+            <% end  %>
+            </div>
+
+          </div>
+          </div>
+        </div>
+
+  
+                                         
