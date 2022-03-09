@@ -29,15 +29,16 @@
   
 }
   
-  .btn-flat:hover {
-    background: #1BCB7F;
-    color: white;
-  }
 
-  .btn.btn-sign-up {
-    width: 70%;
-    margin-bottom: 16px;
-    border-radius: 20px;
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.btn.btn-sign-up {
+  width: 70%;
+  margin-bottom: 16px;
+  border-radius: 20px;
 }
 
 .btn-index { 
@@ -45,3 +46,16 @@
   width: max-content !important;
   right: 12px !important;
 }
+
+#home-btn {
+  margin: 50px auto;
+  display:block;
+  height: 44px;
+  width: 55%;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  background-color: $logo-pink;
+}
+

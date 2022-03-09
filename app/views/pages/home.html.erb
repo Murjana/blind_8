@@ -1,4 +1,4 @@
-<div class="home">
+<!-- <div class="home">
   <div class="container">
      <%= image_tag "couple.png", :class => "large-logo" %>
       <h1>Blind8</h1>
@@ -8,5 +8,18 @@
       The aim is to actually give chance to get to know people for what they are and not to boost one's ego, thus one is allowed to interact with a max number of 8 users at the same time and in order to move on one meets and takes it outside the platform into the real world or end the thread and move on to the next possible date.
       As this is a bind dating app, kindly be aware no photos of you are allowed. That includes images in your likeness or resemblance. Be creative. Choose something that represents you. Show who you are behind the physical dimension. Any photos that go against this rule will be deleted by our moderators. Love blindly and embrace the others! </p>
       <%= link_to  "Open your heart and close your eyes!",  new_user_registration_path %>
+  </div>
+</div> -->
+
+<div class="home">  
+  <div class="banner" style="background-image: linear-gradient(rgba(254, 31, 78, 0.1),rgba(0,0,0,0.9)), url(https://live.staticflickr.com/5577/14584650519_eea251e497_b.jpg);">
+    <div class="container">
+      <%= image_tag "couple.png", :class => "large-logo" %>
+      <h1>Blind8</h1>
+      <p><strong>Blind8 isn't a dating app. It's an experience. A chance to throw judgements out the door and rediscover that love is blind. Close your eyes, make a move, and leave your selfies at the door. </strong></p>
+    </div>
+  <div class="home-btn">
+    <%= link_to  "Make love blind again",  new_user_registration_path, class: "btn btn-home", id: "home-btn"%>
+  </div>
   </div>
 </div>
