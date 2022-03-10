@@ -1,59 +1,20 @@
-<%# This code snippet was for the alert %>
-       <%# <div class="container" data-controller="notification">
-        <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">
-         "Your question has been sent to the user"
-          <button type="button" class="btn-close" data-action="click->notification#close">
-            </button>
-      </div>
-    </div> %>
-<!-- 
-    <div class="container mt-3">
-        <div class="col-md-4 mt-4">
-    		    <div class="card profile-card-5">
-    		        <div class="card-img-block">
-    		            <img class="card-img-top" src="<%= cl_image_path @user.photo.key, height: 300, width: 400, crop: :fill%> " alt="Card image cap"></div>
-                        <div class="card-body pt-0">
-                              <h1 class="card-title"><%= @user.nickname.capitalize %>, <%= @user.age %> <%= @user.zodiac %></h1>
-    		                                  <div class="card-img-block">
-                                            <strong><p>About me:</p></strong> <p><%= @user.about_me %></p>
-                                            <br>
-                                              </div>
-                                                   <strong><p>Prefered ideas:</p></strong> <p><%= @user.preferred_date_ideas %></p>
 
-                                        <% if @user == current_user %>
-                                          <%= link_to "edit", "#", class: "btn btn-flat btn-sign-up", id: "poke", method: "patch"%>
-                                        <% else %>
-                                          <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke", method: :create %>
-                                        <% end  %>
-                                  </div>
-                              </div>
-                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-       -->
+<div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @user.photo.key %>);">
+<div class="home">   
+    <div class="container">
+      <h1><%= @user.nickname.capitalize %></h1>
+      <p><strong><%= @user.about_me %></strong></p>
+      <p id="zodiac-gender"><em><%= @user.zodiac %><br><strong>Orientation: </strong><%= @user.orientation %>, <%= @user.gender %></em></p>
+    <% if @user == current_user %>
+      <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %> 
+    <% else %>
+      <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %>
+    <% end  %>
+    </div>
 
-       <div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @user.photo.key %>);">
-        <div class="home">   
-            <div class="container">
-              <h1><%= @user.nickname.capitalize %></h1>
-              <p><strong><%= @user.about_me %></strong></p>
-              <p id="zodiac-gender"><em><%= @user.zodiac %>, <%= @user.orientation %>, <%= @user.gender %></em></p>
-            <% if @user == current_user %>
-              <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %> 
-            <% else %>
-              <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %>
-            <% end  %>
-            </div>
-
-          </div>
-          </div>
-        </div>
+  </div>
+  </div>
+</div>
 
   
                                          

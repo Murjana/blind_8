@@ -18,7 +18,10 @@ puts "Deleted all instances of database"
 # validates :orientation, presence: true, inclusion: { in: %w(not-sharing straight gay lesbian bisexual allosexual androsexual asexual autosexual bicurious demisexual fluid graysexual gynesexual monosexual omnisexual pansexual polysexual queer questioning skoliosexual spectrasexual not-listed) }
 # validates :gender, presence: true, inclusion: { in: ['Male', 'Female', 'Trans-Man', 'Trans-Woman', 'Non-binary', 'Non-conforming', 'Not-sharing'] }
 # validates :zodiac, presence: true, inclusion: { in: %w(♈Aries ♉Taurus ♊Gemini ♋Cancer ♌Leo ♍Virgo ♎Libra ♏Scorpio ♐Sagittarius ♑Capricornus ♒Aquarius ♓Pisces) }
-
+file_clown = URI.open('https://images.unsplash.com/photo-1597066077705-a80f9863fb52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvd24lMjBkcmF3aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')
+clown = User.new(nickname: "The Clown", zodiac: "♓Pisces", orientation: "spectrasexual", password: "123456", email: 'clown@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Cooking is my hobby. I cook everything. I would love to cook for you and share my skills.", about_me: " I moved to Berlin 3 years ago. My friend told me about this app. Apparently, she met her 'partner' here, at least that's what they call each other. So I decided to give it a try myself. I’m hopeful something will happen. I can be a bit erratic but I also have a heart of gold. I love move through the world like a raging bull. I want someone who will be with me on the journey to the end.", age: 23)
+clown.photo.attach(io: file_clown, filename: 'tarzan.jpg', content_type: 'image/jpg')
+clown.save!
 
 file_ladygogo = URI.open('https://images.saatchiart.com/saatchi/1781870/art/8396855/7461213-HSC00002-6.jpg')
 ladygogo = User.new(nickname: "Lady Gogo", zodiac: "♐Sagittarius", orientation: "bisexual", password: "123456", email: "gogo@gmail.com", gender: "Female", about_me: "Im an artist based in Berlin. I moved here from Santiago, Chila over ten years ago and have fallen in love with the city ever since. I see myself as someone who likes to take risks. Ive been called a feather in the wind by my friends, someone who goes with the flow of things and likes to see where life takes me. Im curious about meeting new people without the expectations around how someone photographs.", preferred_date_ideas: "I love museums. Art is very close to my heart. I would jump on any opportunity to explore:) ", age: 26)
@@ -26,7 +29,7 @@ ladygogo.photo.attach(io: file_ladygogo, filename: 'botanest.jpg', content_type:
 ladygogo.save!
 
 file_madam_yogi = URI.open('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pd237-pdburnejones00052-image_3.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1e5834b2e17eeebecccc2ec045a54540')
-madam_yogi = User.new(nickname: "Madam Yogi", zodiac: "♏Scorpio", password: "123456", email: "yogi@gmail.com", orientation: "fluid", gender: "Trans-Woman", preferred_date_ideas: "I don’t like to go out, but I really enjoy quality time at home with someone. Wine, movies, etc ;)", about_me: " I’m a professional Yoga trainer. I’ve lived in Berlin all my life. You could call me a Berliner I suppose, but I also love to travel. I’m looking mostly for casual encounters that surprise me. I dont want my dating or sex life to feel like I’m ordering a pizza. I want genuine connection, but also genuine surprise. I want to be overcome by something I never knew existed and to discover my own unconscious desires. If anything I said sounds like it might relate to you, please POKE ME.", age: 26)
+madam_yogi = User.new(nickname: "Madam Yogi", zodiac: "♏Scorpio", password: "123456", email: "yogi@gmail.com", orientation: "fluid", gender: "Trans-Woman", preferred_date_ideas: "I don’t like to go out, but I really enjoy quality time at home with someone. Wine, movies, etc ;)", about_me: " I’m a professional Yoga trainer. I’ve lived in Berlin all my life. You could call me a Berliner I suppose, but I also love to travel. I dont want my dating or sex life to feel like I’m ordering a pizza. I want genuine connection, but also genuine surprise. I want to be overcome by something I never knew existed and discover my unconscious desires. Please POKE ME.", age: 26)
 madam_yogi.photo.attach(io: file_madam_yogi, filename: 'mr_right.jpg', content_type: 'image/jpg')
 madam_yogi.save!
 
@@ -34,11 +37,6 @@ file_bateman = URI.open('https://images.fineartamerica.com/images/artworkimages/
 bateman = User.new(nickname: "Mr. Bateman", zodiac: "♎Libra", orientation: "questioning", password: "123465", email: "bateman@gmail.com", gender: "Male", preferred_date_ideas: "I don’t know why Im here. Ive been questioning things but I’m open to suggestions.", about_me: " I’m a business tycoon and entrepreneur. All my life I’ve been successful at what I do. I take great pride in work but over the past several months I’ve realized that despite all my success I am completely alone. I’m looking for something deeper to fill the void. I’m not sure about myself sexually and I’m hoping to meet someone who will be kind and okay with that. I probably won't message you first. I can be shy.", age: 34)
 bateman.photo.attach(io: file_bateman, filename: 'boulder.jpg', content_type: 'image/jpg')
 bateman.save!
-
-file_clown = URI.open('https://c.pxhere.com/images/61/ac/c7a23ec6ca3bbb111b2e7d075f69-1586085.jpg!d')
-clown = User.new(nickname: "The Clown", zodiac: "♓Pisces", orientation: "spectrasexual", password: "123456", email: 'clown@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Cooking is my hobby. I cook everything. I would love to cook for you and share my skills.", about_me: "My friend told me about this app. Apparently, she met her 'partner' here, at least that's what they call each other now.  Initially, I didn’t believe her. But then I met him and decided to try myself. I’m hopeful something will happen. I can be a bit erratic but I also have a heart of gold. I love move through the world like a raging bull. Life is too short to waste on being graceful. I want someone who will be with me on the journey to the end.", age: 23)
-clown.photo.attach(io: file_clown, filename: 'tarzan.jpg', content_type: 'image/jpg')
-clown.save!
 
 file_ladybug = URI.open('https://img.freepik.com/free-photo/dissatisfied-cat-ladybugs-fly-around-color-sketch-cat-s-face-isolated-white-background-pencil-drawing-art-work_410993-16.jpg')
 ladybug = User.new(nickname: "Lady Bug", zodiac: "♌Leo", orientation: "fluid", password: "123456", email: 'lady@gmail.com', gender: "Female", preferred_date_ideas: " Me, you, nature & a nice picnic set! Maybe some dogs too?", about_me: "I love animals in all shapes and forms, even the talking ones, wink wink! I have experienced other dating apps and I have experienced all sorts of animalistic behaviors there so I migrated here. I'm tired of posing and pretending and hoping to meet someone who is an animal lover and invested in what is behind an image! Off topic, if you count the mice on train tracks you should poke me!", age: 31)
@@ -55,7 +53,7 @@ nina = User.new(nickname: "Ninaa", zodiac: "♓Pisces", orientation: "gynesexual
 nina.photo.attach(io: file_nina, filename: 'nina.png', content_type: 'image/png')
 nina.save!
 
-file_penny = URI.open('https://c.pxhere.com/images/a8/a2/446ea6ff1704cfe4d608a3a441b8-1586079.jpg!d')
+file_penny = URI.open('https://images.unsplash.com/photo-1581343109266-bd1554db3e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=420&q=80')
 penny = User.new(nickname: "Pennywise",  orientation: "polysexual", zodiac: "♒Aquarius", password: "123456", email: 'penny@gmail.com', gender: "Male", preferred_date_ideas: "Watch Dexter together?For real now, I would like to take you to the Planetarium", about_me: "In a nutshell i’m nuts they say, but I'm the good kind of nuts! I like to eat you , Ops did I just say that? I'm known for my bad dad jokes, well bad jokes in general to be honest so its fine if you don’t laugh. Im am ER doctor during the day and once in a while I do drag! Could this drag you to me?", age: 30)
 penny.photo.attach(io: file_penny, filename: 'penny.jpg', content_type: 'image/png')
 penny.save!
