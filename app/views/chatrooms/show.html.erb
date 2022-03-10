@@ -1,18 +1,33 @@
 
-<div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @chatroom.user_a.photo.key %>);">
+<div class="container chatroom chat-background" id="killpadding-top" style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @chatroom.user_a.photo.key %>);">
+
+
+
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+  <div class="banner-chat" >
   <div class="d-flex justify-content-start">
     <h1><%= current_user == @chatroom.user_a ? @chatroom.user_b.nickname.capitalize : @chatroom.user_a.nickname.capitalize %></h1>
   </div>
+</div>
 
   <div class="messages"
    data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+    <% if message.user == current_user %>
+   <%# here we used if else statement to position messages. If current_user
+   then right, else left %> <%# see comments also in message/_messages.html.erb %>
+      <%= render "messages/message", message: message, position: "right" %>
+    <% else %>
+      <%= render "messages/message", message: message, position: "left" %>
     <% end %>
-  </div>
+
+    <% end %>
+    <%# it is also necessary to add css parameters in app/assets/
+    stylsheets/components/ _chtrooms.scss. .right->p text-align: right;
+     and .left triggering -> p text-align: left;  %>
+</div>
 
   <%= simple_form_for [@chatroom, @message],
     remote: true,
@@ -22,8 +37,9 @@
       placeholder: "enter your message",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Send", class: "btn btn-primary" %>
+    <%= f.submit "↑", class: "submitbutton" %>
   <% end %>
-
 </div>
 </div>
+  </div>
+  </div>
