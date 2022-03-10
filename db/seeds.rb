@@ -30,7 +30,7 @@ madam_yogi = User.new(nickname: "Madam Yogi", zodiac: "♏Scorpio", password: "1
 madam_yogi.photo.attach(io: file_madam_yogi, filename: 'mr_right.jpg', content_type: 'image/jpg')
 madam_yogi.save!
 
-file_bateman = URI.open('https://freesvg.org/img/Terrified-Face.png')
+file_bateman = URI.open('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/self-portrait-detail-egon-schiele.jpg')
 bateman = User.new(nickname: "Mr. Bateman", zodiac: "♎Libra", orientation: "questioning", password: "123465", email: "bateman@gmail.com", gender: "Male", preferred_date_ideas: "I don’t know why Im here. Ive been questioning things but I’m open to suggestions.", about_me: " I’m a business tycoon and entrepreneur. All my life I’ve been successful at what I do professionally. I take great pride in work but over the past several months I’ve realized that despite all my success I am completely alone. I’m a funny guy with many people I like to call friends but I’m looking for something deeper to fill the void. I’m not sure about myself sexually and I’m hoping to meet someone who will be kind and okay with that. I probably will not message you first because I can be shy. But let’s get a conversation going and see what happens.", age: 34)
 bateman.photo.attach(io: file_bateman, filename: 'boulder.jpg', content_type: 'image/jpg')
 bateman.save!
