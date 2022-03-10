@@ -21,8 +21,4 @@ class ChatroomsController < ApplicationController
     end
     redirect_to chatroom_path(@chatroom)
   end
-
-
-
-
 end
