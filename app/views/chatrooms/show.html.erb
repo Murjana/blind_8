@@ -2,7 +2,9 @@
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-  <h1><%= @chatroom.user_a.nickname.capitalize %></h1>
+  <div class="d-flex justify-content-start">
+    <h1><%= @chatroom.user_a.nickname.capitalize %></h1>
+  </div>
 
   <div class="messages"
 
