@@ -1,10 +1,8 @@
 
 <% content_for :meta_title, "#{@user.nickname} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @user.about_me %>
-<% content_for :meta_image, cl_image_path(@user.photo.path) %>
 
 <div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @user.photo.key %>);">
-<div class="home">   
+<div class="home">
     <div class="container">
       <h1><%= @user.nickname.capitalize %></h1>
       <p><strong><%= @user.about_me %></strong></p>
@@ -17,7 +15,3 @@
     </div>
   </div>
   </div>
-
-
-  
-                                      
