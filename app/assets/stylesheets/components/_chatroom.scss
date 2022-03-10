@@ -30,3 +30,20 @@
     }
   }
 }
+
+
+.chatrooms a, a:hover {
+  color: white;
+  font-size: 15px;
+}
+
+.underline {
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+.headline-shadow {
+  text-shadow: 9px 4px 10px white !important;
+  font-weight: bold;
+}
