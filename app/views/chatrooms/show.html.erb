@@ -1,5 +1,5 @@
 
-<div class="container chatroom"
+<div class="container chatroom" id="killpadding-top"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <h1><%= @chatroom.user_a.nickname.capitalize %></h1>
@@ -31,5 +31,5 @@
       placeholder: "enter your message",
       wrapper_html: {class: "flex-grow-1"}
     %>
-    <%= f.submit "Send", class: "btn btn-primary" %>
+    <%= f.submit "↑", class: "submitbutton" %>
   <% end %>
