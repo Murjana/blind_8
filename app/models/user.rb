@@ -7,7 +7,7 @@ class User < ApplicationRecord
   #has_many :user_interests
   has_many :interests, through: :user_interests
   has_many :chatrooms
-  has_many :chatrooms_as_user_a, class_name: "Chatroom", foreign_key: :user_a_id, dependent: :destroy
+  has_many :chatroom_as_user_a, class_name: "Chatroom", foreign_key: :user_a_id, dependent: :destroy
   has_many :chatrooms_as_user_b, class_name: "Chatroom", foreign_key: :user_b_id, dependent: :destroy
   has_many :messages
   has_many :answers_as_asker, class_name: "Answer", foreign_key: :asker_id

@@ -1,19 +1,40 @@
+<div class="container chatrooms">
   <% if !@chatrooms.empty? %>
-    <h1>Your blind loved ones</h1>
-    <h2 class='userNickname' ><%= current_user.nickname %>'s Messages</h2>
-    <ul>
+    <h1 class="underline">Your eight loved ones!</h1>
       <% @chatrooms.first(8).each do |chatroom| %>
-        <li>
-          <% if chatroom.user_a == current_user  %>
-            <%= link_to "#{chatroom.user_b.nickname}", chatroom_path(chatroom) %>
-          <% else %>
-            <%= link_to "#{chatroom.user_a.nickname}", chatroom_path(chatroom) %>
+        <% unless chatroom.user_a == chatroom.user_b %>
+          <%= link_to chatroom do %>
+              <div class="d-flex justify-content-start align-items-center mt-4">
+                <% if chatroom.user_a == current_user  %>
+                    <% user_b = User.find(chatroom.user_b_id) %>
+
+                    <%= cl_image_tag user_b.photo.key, crop: :fill, class: "chatroom-user-image" %>
+
+                  <div class="ms-4 chatroom-user-info text-start">
+
+                    <h2 class="index-h2"><%= user_b.nickname.capitalize %> </h2>
+
+
+                  </div>
+                <% else %>
+                  <% user_a = User.find(chatroom.user_a_id) %>
+
+                    <%= cl_image_tag user_a.photo.key, crop: :fill, class: "chatroom-user-image" %>
+
+                  <div class="chatroom-user-info ms-4">
+
+                    <h2 class="index-h2"><%= user_a.nickname.capitalize %> </h2>
+
+
+                  </div>
+                <% end %>
+              </div>
           <% end %>
-        </li>
+
+        <% end %>
       <% end %>
-    </ul>
   <% else %>
     <h1> You do not have any chats yet</h1>
     <%= link_to "start browsing", users_path %>
   <% end %>
-     
+</div>

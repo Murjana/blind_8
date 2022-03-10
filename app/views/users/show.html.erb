@@ -1,4 +1,3 @@
-
 <div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @user.photo.key %>);">
 <div class="home">   
     <div class="container">
@@ -6,15 +5,13 @@
       <p><strong><%= @user.about_me %></strong></p>
       <p id="zodiac-gender"><em><%= @user.zodiac %><br><strong>Orientation: </strong><%= @user.orientation %>, <%= @user.gender %></em></p>
     <% if @user == current_user %>
-      <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %> 
+       <%= link_to "sign out", destroy_user_session_path, class: "btn btn-flat btn-sign-up", id: "sign-out", method: :delete %>
     <% else %>
       <%= link_to "poke", chatrooms_path(user_a_id: @user.id), class: "btn btn-flat btn-sign-up", id: "poke-show", method: :create %>
     <% end  %>
     </div>
-
   </div>
   </div>
-</div>
 
   
-                                         
+                                      
