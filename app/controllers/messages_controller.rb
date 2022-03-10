@@ -12,8 +12,8 @@ class MessagesController < ApplicationController
       )
       # The counter cache may seem mysterious, but it’s not that complicated.
       # It’s just a database column storing the number of children, with the value automatically updated.
-      @chatroom.counter += 1
-      @chatroom.save
+      #@chatroom.counter += 1
+      #@chatroom.save
 
     else
       render "chatrooms/show"

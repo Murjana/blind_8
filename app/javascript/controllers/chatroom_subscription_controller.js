@@ -8,11 +8,14 @@ export default class extends Controller {
   connect() {
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
-      { received: (message) => {
+      { received: (message) =>{
         // This inject the chat of one user to the chat of another without refreshing
         this.messagesTarget.insertAdjacentHTML("beforeend", message)
+        //const textArea = document.getElementById("message_content")
+        //console.log(textArea.value)
         // As soon as you inject the chat, the chat will appear without the need to scroll down
         this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+        this.formTarget.reset()
       } }
     )
   }
