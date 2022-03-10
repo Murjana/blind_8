@@ -53,7 +53,7 @@ nina = User.new(nickname: "Ninaa", zodiac: "♓Pisces", orientation: "gynesexual
 nina.photo.attach(io: file_nina, filename: 'nina.png', content_type: 'image/png')
 nina.save!
 
-file_penny = URI.open('https://c.pxhere.com/images/a8/a2/446ea6ff1704cfe4d608a3a441b8-1586079.jpg!d')
+file_penny = URI.open('https://images.unsplash.com/photo-1581343109266-bd1554db3e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=420&q=80')
 penny = User.new(nickname: "Pennywise",  orientation: "polysexual", zodiac: "♒Aquarius", password: "123456", email: 'penny@gmail.com', gender: "Male", preferred_date_ideas: "Watch Dexter together?For real now, I would like to take you to the Planetarium", about_me: "In a nutshell i’m nuts they say, but I'm the good kind of nuts! I like to eat you , Ops did I just say that? I'm known for my bad dad jokes, well bad jokes in general to be honest so its fine if you don’t laugh. Im am ER doctor during the day and once in a while I do drag! Could this drag you to me?", age: 30)
 penny.photo.attach(io: file_penny, filename: 'penny.jpg', content_type: 'image/png')
 penny.save!
