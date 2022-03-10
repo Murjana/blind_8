@@ -39,12 +39,12 @@ bateman.photo.attach(io: file_bateman, filename: 'boulder.jpg', content_type: 'i
 bateman.save!
 
 file_ladybug = URI.open('https://img.freepik.com/free-photo/dissatisfied-cat-ladybugs-fly-around-color-sketch-cat-s-face-isolated-white-background-pencil-drawing-art-work_410993-16.jpg')
-ladybug = User.new(nickname: "Lady Bug", zodiac: "♌Leo", orientation: "fluid", password: "123456", email: 'lady@gmail.com', gender: "Female", preferred_date_ideas: " Me you and nature, a blanket we set on and we have a picnic set! Maybe your dogs too?", about_me: "I love animals in all shapes and forms, even the talking ones, wink wink! I have experienced other dating apps and I have experienced all sorts of animalistic behaviors there so I migrated here. I'm tired of posing and pretending and hoping to meet someone who is an animal lover and invested in what is behind an image! Off topic, if you count the mice on train tracks you should poke me!", age: 31)
+ladybug = User.new(nickname: "Lady Bug", zodiac: "♌Leo", orientation: "fluid", password: "123456", email: 'lady@gmail.com', gender: "Female", preferred_date_ideas: " Me, you, nature & a nice picnic set! Maybe some dogs too?", about_me: "I love animals in all shapes and forms, even the talking ones, wink wink! I have experienced other dating apps and I have experienced all sorts of animalistic behaviors there so I migrated here. I'm tired of posing and pretending and hoping to meet someone who is an animal lover and invested in what is behind an image! Off topic, if you count the mice on train tracks you should poke me!", age: 31)
 ladybug.photo.attach(io: file_ladybug, filename: 'ladybug.jpg', content_type: 'image/jpg')
 ladybug.save!
 
 file_malis = URI.open('https://st4.depositphotos.com/5891300/29925/v/1600/depositphotos_299250468-stock-illustration-tongue-showing-out-of-mouth.jpg')
-malis = User.new(nickname: "Malis in Wonderland", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under the stars with only the sound of our deep thoughts!", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
+malis = User.new(nickname: "Miss Malis", zodiac: "♑Capricornus", orientation: "allosexual", password: "123456", email: 'malis@gmail.com', gender: "Not-sharing", preferred_date_ideas: "Us under the stars with only the sound of our deep thoughts!", about_me: "Rough around the edges but soft at heart, luxurious in my tongue and lucid in my dreams and a tormented soul. I am an amature Psychonaut looking to experience the unknown with a person I can blindly trust, I am also very sexually active!", age: 29)
 malis.photo.attach(io: file_malis, filename: 'malis.jpg', content_type: 'image/jpg')
 malis.save!
 
