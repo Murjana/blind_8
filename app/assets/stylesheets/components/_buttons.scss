@@ -26,7 +26,9 @@
   position: absolute;
   right:    0;
   bottom:   0;
+
 }
+
 
 #poke-show {
   color: white;
@@ -77,4 +79,14 @@
   color: white;
   font-weight: 600;
   background-color: $logo-pink;
+}
+
+.submitbutton{
+  color: white;
+  border-radius: 169px;
+  height: 44px;
+  width: 45px;
+  background-color: #FE1F4E;
+  font-size: 27px;
+  border: none;
 }
