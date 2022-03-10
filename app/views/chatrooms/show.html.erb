@@ -9,8 +9,19 @@
    data-chatroom-subscription-target="messages"
    data-chatroom-subscription-target="form">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+    <% if message.user == current_user %>
+   <%# here we used if else statement to position messages. If current_user
+   then right, else left %> <%# see comments also in message/_messages.html.erb %>
+      <%= render "messages/message", message: message, position: "right" %>
+    <% else %>
+      <%= render "messages/message", message: message, position: "left" %>
     <% end %>
+    <% end %>
+    <%# it is also necessary to add css parameters in app/assets/
+    stylsheets/components/ _chtrooms.scss. .right->p text-align: right;
+     and .left triggering -> p text-align: left;  %>
+
+</div>
 
   <%= simple_form_for [@chatroom, @message],
     remote: true,
@@ -22,4 +33,3 @@
     %>
     <%= f.submit "Send", class: "btn btn-primary" %>
   <% end %>
-</div>
