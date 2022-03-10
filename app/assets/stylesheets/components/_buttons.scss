@@ -27,13 +27,24 @@
   right:    0;
   bottom:   0;
 }
- 
+
 #poke-show {
   color: white;
   border-radius: 28px;
   padding: 8px 24px;
   margin-right: 15px;
   width: 100px;
+  background: $logo-pink;
+  transition: background 0.3s ease;
+  margin-left: 125px;
+}
+
+#sign-out {
+  color: white;
+  border-radius: 28px;
+  padding: 8px 24px;
+  margin-right: 15px;
+  width: 115px;
   background: $logo-pink;
   transition: background 0.3s ease;
   margin-left: 125px;
@@ -50,7 +61,7 @@
   border-radius: 20px;
 }
 
-.btn-index { 
+.btn-index {
   padding: 6px 12px !important;
   width: max-content !important;
   right: 12px !important;
@@ -67,4 +78,3 @@
   font-weight: 600;
   background-color: $logo-pink;
 }
-
