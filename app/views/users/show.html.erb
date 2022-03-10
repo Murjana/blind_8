@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@user.nickname} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @user.about_me %>
+<% content_for :meta_image, cl_image_path(@user.photo.path) %>
+
 <%# This code snippet was for the alert %>
        <%# <div class="container" data-controller="notification">
         <div class="d-none alert alert-info alert-dismissible fade show m-1" role="alert" data-notification-target="notice">

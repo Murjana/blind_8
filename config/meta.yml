@@ -1,0 +1,5 @@
+meta_product_name: "Blind8"
+meta_title: "Blind8 - Lets make love blind again!"
+meta_description: "Blind8 is an experience. A chance to throw judgements out the door and rediscover that love is blind.Close your eyes, make a move, and leave your selfies at the door."
+meta_image: "blind_8.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
