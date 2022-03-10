@@ -21,7 +21,6 @@
   }
 
   #new_message {
-    border-top: 1px solid $gray-200;
     padding: 1rem;
 
     .form-group {
@@ -61,3 +60,11 @@
 }
 
 
+small{
+  font-size: 12px
+}
+
+#message_content{
+  height:43px;
+  border: none;
+}
