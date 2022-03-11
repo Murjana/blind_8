@@ -35,7 +35,9 @@
   <body>
 
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="mb-5">
+      <%= yield %>
+    </div>
     <% if current_user %>
      <%= render 'shared/mobnavbar'%>
     <% end %>
