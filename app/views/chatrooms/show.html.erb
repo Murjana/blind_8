@@ -3,14 +3,14 @@
 
 
 
-<div class="container chatroom"
-  data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-  <div class="banner-chat" >
-  <div class="d-flex justify-content-start">
-    <h1><%= current_user == @chatroom.user_a ? @chatroom.user_b.nickname.capitalize : @chatroom.user_a.nickname.capitalize %></h1>
+  <div class="container chatroom"
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+    <div class="banner-chat" >
+    <div class="d-flex justify-content-start">
+      <h1><%= current_user == @chatroom.user_a ? @chatroom.user_b.nickname.capitalize : @chatroom.user_a.nickname.capitalize %></h1>
+    </div>
   </div>
-</div>
 
   <div class="messages"
    data-chatroom-subscription-target="messages">
@@ -20,7 +20,7 @@
     <%# it is also necessary to add css parameters in app/assets/
     stylsheets/components/ _chtrooms.scss. .right->p text-align: right;
      and .left triggering -> p text-align: left;  %>
-</div>
+  </div>
 
   <%= simple_form_for [@chatroom, @message],
     remote: true,
@@ -33,6 +33,4 @@
     <%= f.submit "↑", class: "submitbutton" %>
   <% end %>
 </div>
-</div>
-  </div>
-  </div>
+
