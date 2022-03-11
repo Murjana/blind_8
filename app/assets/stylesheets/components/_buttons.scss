@@ -84,14 +84,12 @@
 .submitbutton{
   color: white;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 45px;
   width: 45px;
   background-color: #FE1F4E;
   font-size: 27px;
   border: none;
-}
-
-.submitbutton p {
-  margin: 0;
-  padding: 0;
 }
