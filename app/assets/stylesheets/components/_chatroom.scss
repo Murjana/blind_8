@@ -31,6 +31,7 @@
 }
 
 .right {
+  opacity: 0.9;
   text-align: right;
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -38,6 +39,8 @@
   padding: 10px;
   margin-bottom: 17px;
   p {
+    width: 100%;
+    font-size: 18px;
     text-align: right;
     color: rgb(36, 36, 36);
     font-size: 21px;
@@ -46,6 +49,7 @@
 }
 
 .left {
+  opacity: 0.9;
   text-align: left;
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -53,6 +57,8 @@
   margin-bottom: 17px;
   padding: 10px;
   p {
+    width: 100%;
+    font-size: 18px;
     text-align: left;
     color: rgb(36, 36, 36);
     font-size: 21px;

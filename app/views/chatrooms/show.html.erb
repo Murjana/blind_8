@@ -15,14 +15,7 @@
   <div class="messages"
    data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-    <% if message.user == current_user %>
-   <%# here we used if else statement to position messages. If current_user
-   then right, else left %> <%# see comments also in message/_messages.html.erb %>
-      <%= render "messages/message", message: message, position: "right" %>
-    <% else %>
-      <%= render "messages/message", message: message, position: "left" %>
-    <% end %>
-
+      <%= render "messages/message", message: message %>
     <% end %>
     <%# it is also necessary to add css parameters in app/assets/
     stylsheets/components/ _chtrooms.scss. .right->p text-align: right;

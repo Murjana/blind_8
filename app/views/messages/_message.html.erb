@@ -1,6 +1,8 @@
       <%# We added "class= "postion in pe(erb) tag" to trigger it in
       chatrooms/show.html.erb  %>
-      <div id="message-<%= message.id %>" class="<%= position %> " >
+      <% position = message.user == current_user ? "right" : "left" %>
+
+      <div id="message-<%= message.id %>" class=<%= position %>  >
         <small>
           <strong><%= message.user.nickname %></strong>
           <i><%= message.created_at.strftime("%l:%M %p") %></i>
