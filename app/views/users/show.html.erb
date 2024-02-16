@@ -1,7 +1,7 @@
 
 <% content_for :meta_title, "#{@user.nickname} is on #{DEFAULT_META["meta_product_name"]}" %>
-
-<div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2),rgba(0,0,1,1)), url(<%= cl_image_path @user.photo.key %>);">
+<%= cl_image_tag("your_image_public_id", cloud_name: "your_cloud_name") %>
+<div class="banner"  style="background-image: linear-gradient(rgba(254, 31, 78, 0.2), rgba(0,0,1,1)), url(<%= cl_image_path(@user.photo.key) %>)">
 <div class="home">
     <div class="container user-padding">
       <h1><%= @user.nickname.capitalize %></h1>
